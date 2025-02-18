@@ -1,6 +1,6 @@
 
 "use client"
-import ColorSlide from '@/app/C13-L1-WRMUP/colorSlide'
+import ColorSlide from '@/carousel-C13/colorSlide'
 import React, { useState } from 'react'
 import ResultC13 from './result'
 
