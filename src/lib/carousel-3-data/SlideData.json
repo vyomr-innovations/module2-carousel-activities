@@ -1,0 +1,22 @@
+[
+    {
+       "color":"yellow",
+       "text":"RECOGNIZE"
+    },
+     {
+       "color":"Purple",
+       "text":"UNDERSTAND"
+    },
+    {
+       "color":"Pink",
+       "text":"LABEL"
+    },
+    {
+       "color":"blue",
+       "text":"EXPRESS"
+    },
+    {
+       "color":"green",
+       "text":"REGULATE"
+    }
+]

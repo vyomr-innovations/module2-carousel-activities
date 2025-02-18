@@ -1,4 +1,4 @@
-import CrouselSecound from '@/carousel-2'
+import CrouselSecound from '@/carousel-C9'
 import React from 'react'
 
 const Page = () => {
