@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { GoThumbsup } from "react-icons/go";
 import { GoThumbsdown } from "react-icons/go";
-import SlideData from "@/lib/slideData.json";
+import SlideData from "@/lib/craousel-1-data/slideData.json";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import { Swiper as SwiperClass } from "swiper";

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import SlideStart from "./slides";
 import Result from "./result";
 
-const CarouselHome = () => {
+const CrouselFirst = () => {
   const [isFirstScreen, setIsFirstScreen] = useState("slide");
   return <>
   {isFirstScreen === "slide" && <SlideStart setIsFirstScreen={setIsFirstScreen} />}
@@ -14,4 +14,4 @@ const CarouselHome = () => {
   </>;
 };
 
-export default CarouselHome;
+export default CrouselFirst;

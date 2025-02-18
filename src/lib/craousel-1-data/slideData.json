@@ -1,51 +1,51 @@
 [
     {
-        "image":"/1.jpg",
+        "image":"/crousel-1-images/1.jpg",
         "text":"Ron walks away when she sees her friend crying by herself.",
         "value":"Thumbs down"
     },
     {
-        "image":"/2.jpg",
+        "image":"/crousel-1-images/2.jpg",
         "text":"ELiza and Harry make a card for their sick teacher",
         "value":"Thumbs up"
     } ,
     {
-        "image":"/3.jpg",
+        "image":"/crousel-1-images/3.jpg",
         "text":"Ron sees a puppy stuck in the fence and walks away.",
         "value":"Thumbs down"
     },
     {
-        "image":"/4.jpg",
+        "image":"/crousel-1-images/4.jpg",
         "text":"Isaac helps his brother to reach the top of the jungle gym at the park.",
         "value":"Thumbs up"
     },
     {
-        "image":"/5.jpg",
+        "image":"/crousel-1-images/5.jpg",
         "text":"Jamilla sees her friend getting bullied on the playground but walks ahead. ",
         "value":"Thumbs down"
     } ,
     {
-        "image":"/6.jpg",
+        "image":"/crousel-1-images/6.jpg",
         "text":"Fred is taking care of his injured friend at the basketball court.",
         "value":"Thumbs up"
     },
     {
-        "image":"/7.jpg",
+        "image":"/crousel-1-images/7.jpg",
         "text":" Garry hears a group of his classmates arguing in the library, and asks to calm them down.",
         "value":"Thumbs up"
     },
     {
-        "image":"/8.jpg",
+        "image":"/crousel-1-images/8.jpg",
         "text":"Carl learns about the prank his friends are planning for the new kid, and stops them. ",
         "value":"Thumbs up"
     },
     {
-        "image":"/9.jpg",
+        "image":"/crousel-1-images/9.jpg",
         "text":"Sam presents the project at the assembly.",
         "value":"Thumbs up"
     },
     {
-        "image":"/10.jpg",
+        "image":"/crousel-1-images/10.jpg",
         "text":" Zoho walks his younger sister to the piano class.",
         "value":"Thumbs up"
     }

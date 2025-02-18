@@ -1,0 +1,28 @@
+[
+    {
+        "image":"/1.jpg",
+        "text":"Your family is going on a picnic, but no one packed plates and cups. Everyone is upset and doesn’t know what to do.",
+        "title":"Family Picnic Mix-Up"
+    },
+    {
+        "image":"/2.jpg",
+        "text":"Your parents are out and it is dinner time. Your younger brother is hungry, and starts crying.",
+        "title":"Crying Bro"
+    } ,
+    {
+        "image":"/3.jpg",
+        "text":"You have a family guest staying overnight. Everyone is wondering how to make space for the guest to sleep.",
+        "title":"Guest sleep over"
+    },
+    {
+        "image":"/4.jpg",
+        "text":"You are at the sports meet, and suddenly your shoe sole gets ripped off. You are called out to line up for a relay race and don’t know what to do.",
+        "title":"Sports mishap"
+    },
+    {
+        "image":"/5.jpg",
+        "text":"The soccer team can’t agree on a time for practice.",
+        "title":"Soccer practise time"
+    }
+
+]
