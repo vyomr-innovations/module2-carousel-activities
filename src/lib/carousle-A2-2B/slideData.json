@@ -1,0 +1,37 @@
+[
+    {
+        "img":"/C13-L1-A2/trust.jpg",
+        "text":"I help you feel safe and warm. What emotion am I?",
+        "answer":"Trust"
+    },
+    {
+        "img":"/C13-L1-A2/fear.jpg",
+        "text":"I make you feel worried and tensed. What emotion am I?",
+        "answer":"Fear"
+    } ,
+    {
+        "img":"/C13-L1-A2/surprise.png",
+        "text":"I make you look forward to something. What emotion am I?",
+        "answer":"Surprise"
+    },
+    {
+        "img":"/C13-L1-A2/sadness.jpg",
+        "text":"I make you feel a little bummed out and upset. What emotion am I?",
+        "answer":"Sadness"
+    },
+    {
+        "img":"/C13-L1-A2/disgust.jpg",
+        "text":"I make you feel annoyed at something that’s unpleasant. What emotion am I?",
+        "answer":"Disgust"
+    },
+    {
+        "img":"/C13-L1-A2/anger.jpg",
+        "text":"I make you feel furious and strong-headed. What emotion am I?",
+        "answer":"Anger"
+    },
+     {
+        "img":"/C13-L1-A2/joy.jpg",
+        "text":"I make you feel happy and positive. What emotion am I?",
+        "answer":"Joy"
+    }
+]
