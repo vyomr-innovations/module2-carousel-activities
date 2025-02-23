@@ -1,24 +1,31 @@
 [
     {
-        "link":"C9-L2-A2"
+        "link":"C9-L2-A2",
+        "activity":"Solve Problems"
     },
     {
-        "link":"C10-L2-A1"
+        "link":"C10-L2-A1",
+        "activity":"Thumbs up/thumbs down"
     },
     {
-        "link":"C13-L1-WARMUP"
+        "link":"C13-L1-WARMUP",
+        "activity":"RULER"
     },
     {
-        "link":"C13-L1-A2-2A"
+        "link":"C13-L1-A2-2A",
+        "activity":"sound to show these emotions?..."
     },
-
+    
     {
-        "link":"C13-L1-A2-2B"
+        "link":"C13-L1-A2-2B",
+        "activity":"corresponding emotions from the coloured circles."
     },
     {
-        "link":"C13-L1-A3"
+        "link":"C13-L1-A3",
+        "activity":"Understand the situation and express how you feel..."
     },
     {
-        "link":"C13-L1-A4"
+        "link":"C13-L1-A4",
+        "activity":"It’s time for a review!"
     }
 ]

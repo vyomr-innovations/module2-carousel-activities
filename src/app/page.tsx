@@ -4,21 +4,36 @@ import LinkData from "@/routeData/links.json"
 export default function Home() {
 
   return (
-<div className="min-h-screen flex justify-start p-5 items-center bg-[url(/bg/bg-image.jpg)] bg-cover bg-center">
+    <div className="min-h-screen flex flex-col gap-4 items-center justify-start  bg-[url(/bg/bg-image.jpg)] bg-cover bg-center p-5">
+    <h5 className="text-[50px] py-5 text-red-600">Carousels Activities</h5>
+    <div className="grid grid-cols-12 gap-4 min-w-[500px] place-items-center text-center">
+      <div className="col-span-3 min-w-[100px] font-bold border border-black bg-purple-500 py-1 px-4 rounded-lg">
+        Sr. no.
+      </div>
+      <div className="col-span-6 min-w-[500px] font-bold border border-black bg-purple-500 py-1 px-4 rounded-lg">
+        Activity Name
+      </div>
+      <div className="col-span-3 w-full border font-bold  border-black bg-purple-500 py-1 px-4 rounded-lg">
+        Activity Link
+      </div>
+    </div>
 
-<div className=" w-[800px]  flex justify-center gap-5 items-center flex-wrap min-h-full p-5">
-  
-{
-  LinkData.map((item,index)=>(
-    
-    <Link 
-    className="bg-purple-500 py-2 px-5 rounded-lg hover:bg-purple-700 "
-    key={index} 
-    href={`/${item.link}`}>{item.link}</Link>
-  ))
-}
-
+    {
+      LinkData.map((item,index)=>(
+        <div key={index} className="grid grid-cols-12 gap-4 min-w-[500px] place-items-center text-center">
+        <div className="col-span-3 min-w-[100px] border border-black bg-red-400 py-1 px-4 text-black rounded-lg">
+          {index + 1}
+        </div>
+        <div  className="col-span-6 min-w-[500px] border border-black bg-red-400 py-1 px-4 rounded-lg">
+          {item.activity}
+        </div>
+        <div className="col-span-3 w-full border text-black border-black bg-red-400 py-1 px-4 rounded-lg">
+        <Link  href={`/${item.link}`}>{item.link}</Link>
+        </div>
+      </div>
+      ))
+    }
+   
   </div>
-</div>
   );
 }
