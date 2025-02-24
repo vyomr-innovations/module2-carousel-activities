@@ -10,17 +10,18 @@ import { Swiper as SwiperClass } from "swiper";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 
-type SlideProps = {
-  setIsFirstScreen: (value: string) => void;
-};
-export default function SlideStartSec({ setIsFirstScreen }: SlideProps) {
+// type SlideProps = {
+//   setIsFirstScreen: (value: string) => void;
+// };
+export default function SlideStartSec() {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [lastSlide, setLastSlide] = useState<number>(0);
 
   const handleNext = () => {
     swiperRef.current?.slideNext();
     if (lastSlide == SlideData.length - 1) {
-      setIsFirstScreen("result");
+      // setIsFirstScreen("result");
+      return
     }
   };
 
@@ -39,7 +40,7 @@ export default function SlideStartSec({ setIsFirstScreen }: SlideProps) {
     <div className="bg-white min-h-screen flex items-center justify-center">
       <Swiper
           slidesPerView={1}
-          loop={true}
+          loop={false}
           autoplay={false}
           allowTouchMove={false}
           modules={[Navigation]}
@@ -51,20 +52,20 @@ export default function SlideStartSec({ setIsFirstScreen }: SlideProps) {
               <h1 className="text-center text-3xl py-4 text-black">
                 {item.title}
               </h1>
-              <div className="grid grid-cols-12 w-[800px] mx-auto border border-black rounded-lg ">
+              <div className="grid grid-cols-12 w-[900px] mx-auto border border-black rounded-lg ">
                 <div className="col-span-6"> 
                   <div className="relative flex justify-center items-center   overflow-hidden rounded-lg">
                 <Image
                   src={item.image}
                   className="rounded-lg"
                   height={200}
-                  width={400}
+                  width={600}
                   alt="slider image"
                 />
                 
               </div>
               </div>
-                <div className="col-span-6 flex items-center justify-center">
+                <div className="col-span-6  w-full flex items-center justify-center">
                 <p className=" w-full text-black p-4 text-3xl text-center rounded-lg">
                   {item.text}
                 </p>

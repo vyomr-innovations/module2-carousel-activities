@@ -10,13 +10,13 @@ type SlideProps = {
 export default function FirstSlide({ setIsFirstScreen }: SlideProps) {
   return (
     <div className="bg-white min-h-screen flex items-center justify-center">
-      <div className="w-[500px] ">
+      <div className="w-[700px] ">
         <div>
           <h1 className="text-center text-3xl py-4 text-black ">
             Solve Problems
           </h1>
-          <div className="p-5 relative text-black flex justify-center items-center  shadow-md shadow-black overflow-hidden rounded-lg">
-            <ul className="text-xl list-decimal pl-4">
+          <div className="p-5  min-h-[350px] relative text-black flex justify-center items-center  shadow-md shadow-black overflow-hidden rounded-lg">
+            <ul className="text-2xl space-y-3 list-decimal pl-4">
               <li>Identify the problem.</li>
               <li>Suggests a possible solution.</li>
               <li>Explain why you choose that solution.</li>

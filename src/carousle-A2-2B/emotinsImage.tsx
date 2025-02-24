@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React from 'react'
-import { FaArrowRight } from 'react-icons/fa';
+// import { FaArrowRight } from 'react-icons/fa';
 
-type SlideProps = {
-  setIsFirstScreen: (value: string) => void;
-};
-const EmotinsImage = ({setIsFirstScreen}:SlideProps) => {
+// type SlideProps = {
+//   setIsFirstScreen: (value: string) => void;
+// };
+const EmotinsImage = () => {
    return (
       <div className="bg-white min-h-screen flex items-center justify-center">
         <div className="w-[500px] ">
@@ -15,16 +15,7 @@ const EmotinsImage = ({setIsFirstScreen}:SlideProps) => {
             </div>
           </div>
   
-          <div className=" py-4 flex items-center justify-around  text-black">
-            <div
-              className={`border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400`}
-            >
-              <FaArrowRight
-                className="text-[40px]  cursor-pointer "
-                onClick={() => setIsFirstScreen("result")}
-              />
-            </div>
-          </div>
+         
         </div>
       </div>
     );

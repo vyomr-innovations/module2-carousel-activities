@@ -10,10 +10,10 @@ import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import { Swiper as SwiperClass } from "swiper";
 
-type SlideProps = {
-  setIsFirstScreen: (value: string) => void;
-};
-export default function SlideStart({ setIsFirstScreen }: SlideProps) {
+// type SlideProps = {
+//   setIsFirstScreen: (value: string) => void;
+// };
+export default function SlideStart() {
   const swiperRef = useRef<  SwiperClass | null >(null);
   const [lastSlide, setLastSlide] = useState<number>(0);
   const [thumbsDownChek, setThumbsDownChek] = useState(false);
@@ -69,17 +69,17 @@ export default function SlideStart({ setIsFirstScreen }: SlideProps) {
 
   const handleChange = (swipe: SwiperClass) => {
     setLastSlide(swipe.activeIndex);
-    if (lastSlide == SlideData.length - 1) setIsFirstScreen("result");
+    if (lastSlide == SlideData.length - 1) return
+      //  setIsFirstScreen("result");
   };
   return (
     <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="w-[400px] ">
         <h1 className="text-center text-3xl py-4 text-black">
-          Thumbs up/thumbs down
-        </h1>
+        Brave or Not Brave </h1>
         <Swiper
           slidesPerView={1}
-          loop={true}
+          loop={false}
           autoplay={false}
           allowTouchMove={false}
           modules={[Navigation]}

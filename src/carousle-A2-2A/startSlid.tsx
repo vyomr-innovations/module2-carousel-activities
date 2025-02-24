@@ -14,8 +14,7 @@ const StartSlid = ({ setIsFirstScreen }: SlideProps) => {
     <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="w-[500px] ">
         <div>
-        <p className="text-center text-lg py-4 text-black ">Can you make a sound to show these emotions? Let’s go!
-        </p>
+        <p className="text-center text-lg py-4 text-black ">{`Let's review emotions!`}</p>
           <div className="p-5 relative text-black flex justify-center items-center  shadow-md shadow-black overflow-hidden rounded-lg">
            <Image src="/C13-L1-A2/main_image.jpg" width={300} height={200} alt="image"/>
           </div>

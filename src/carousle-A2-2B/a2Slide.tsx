@@ -35,13 +35,13 @@ export default function A2Slide({ setIsFirstScreen }: SlideProps) {
   };
   return (
     <div className="bg-white min-h-screen flex items-center justify-center">
-      <div className="w-[800px] px-2">
+      <div className="w-[900px] px-2">
         <h1 className="text-center text-3xl py-4 text-black">
           Lets review emotions!
         </h1>
         <Swiper
           slidesPerView={1}
-          loop={true}
+          loop={false}
           autoplay={false}
           allowTouchMove={false}
           modules={[Navigation]}
@@ -50,8 +50,8 @@ export default function A2Slide({ setIsFirstScreen }: SlideProps) {
         >
           {SlideData.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="grid grid-cols-12 ">
-                <div className="col-span-8 relative w-[500px] h-[400px] flex justify-center items-center  shadow-md  overflow-hidden rounded-lg">
+              <div className="grid grid-cols-12 gap-[50px]">
+                <div className="col-span-8 relative w-[600px] h-[400px] flex justify-center items-center  shadow-md  overflow-hidden rounded-lg">
                   <Image
                     src={item.img}
                     className="rounded-lg object-cover"
@@ -60,7 +60,7 @@ export default function A2Slide({ setIsFirstScreen }: SlideProps) {
                   />
                   <h1
                     className={`absolute 
-                      bg-[#000000b1] w-full p-4 text-center z-10 rounded-lg  top-0`}
+                      bg-[#000000e5] w-full p-4 text-center z-10 rounded-lg  top-0`}
                   >
                     {item.text}
                   </h1>

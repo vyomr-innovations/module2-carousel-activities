@@ -10,17 +10,18 @@ import { Swiper as SwiperClass } from "swiper";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 
-type SlideProps = {
-  setIsFirstScreen: (value: string) => void;
-};
-const ColorSlide = ({ setIsFirstScreen }: SlideProps) => {
+// type SlideProps = {
+//   setIsFirstScreen: (value: string) => void;
+// };
+const ColorSlide = () => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [lastSlide, setLastSlide] = useState<number>(0);
 
   const handleNext = () => {
     swiperRef.current?.slideNext();
     if (lastSlide == SlideData.length - 1) {
-      setIsFirstScreen("result");
+      // setIsFirstScreen("result");
+      return;
     }
   };
 
@@ -36,11 +37,11 @@ const ColorSlide = ({ setIsFirstScreen }: SlideProps) => {
 
   return (
     <div className="min-h-screen relative flex justify-center items-center">
-      <h1 className="absolute top-1 z-10 text-center text-2xl font-bold text-black ">RULER</h1>
+      {/* <h1 className="absolute top-1 z-10 text-center text-2xl font-bold text-black ">RULER</h1> */}
       <Swiper
       className="h-full flex justify-center items-center"
         slidesPerView={1}
-        loop={true}
+        loop={false}
         autoplay={false}
         allowTouchMove={false}
         modules={[Navigation]}

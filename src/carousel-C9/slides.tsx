@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -11,17 +10,15 @@ import { Swiper as SwiperClass } from "swiper";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 
-type SlideProps = {
-  setIsFirstScreen: (value: string) => void;
-};
-export default function SlideStartSec({ setIsFirstScreen }: SlideProps) {
+
+export default function SlideStartSec() {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [lastSlide, setLastSlide] = useState<number>(0);
 
   const handleNext = () => {
     swiperRef.current?.slideNext();
     if (lastSlide == SlideData.length - 1) {
-      setIsFirstScreen("result");
+      // setIsFirstScreen("result");
     }
   };
 
@@ -37,11 +34,15 @@ export default function SlideStartSec({ setIsFirstScreen }: SlideProps) {
   };
 
   return (
-    <div className="bg-white min-h-screen flex items-center justify-center">
-      <div className="w-[400px] ">
-        <Swiper
+    <div className="bg-white min-h-screen overflow-y-scroll flex flex-col items-center justify-start">
+    <div className="w-[600px] h-[450px] pt-2"
+    >
+        <h1 className="text-center text-3xl py-4 text-black">
+                {SlideData[lastSlide].title} </h1>
+    <Swiper
+    className="w-full h-full"
           slidesPerView={1}
-          loop={true}
+          loop={false}
           autoplay={false}
           allowTouchMove={false}
           modules={[Navigation]}
@@ -49,25 +50,16 @@ export default function SlideStartSec({ setIsFirstScreen }: SlideProps) {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {SlideData.map((item, index) => (
-            <SwiperSlide key={index}>
-              <h1 className="text-center text-3xl py-4 text-black">
-                {item.title}
-              </h1>
-              <div className="relative flex justify-center items-center  shadow-md shadow-black overflow-hidden rounded-lg">
-                <Image
-                  src={item.image}
-                  className="rounded-lg"
-                  height={200}
-                  width={500}
-                  alt="slider image"
-                />
-                <h1 className="absolute bg-[#000000b1] w-full p-4 text-center z-10 rounded-lg  bottom-0">
+            <SwiperSlide key={index} className=" relative w-full h-full bg-cover bg-no-repeat bg-center "
+            style={{ backgroundImage: `url(${item.image})`}}>
+                <h1 className="absolute bg-[#000000d4] w-full p-4 text-center z-10 rounded-lg  bottom-0">
                   {item.text}
                 </h1>
-              </div>
             </SwiperSlide>
           ))}
-          <div className=" py-4 flex items-center justify-around  text-black">
+        
+        </Swiper>
+        <div className="py-4 flex items-center justify-between gap-10 w-full text-black">
             <div
               className={`border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400`}
             >
@@ -85,8 +77,8 @@ export default function SlideStartSec({ setIsFirstScreen }: SlideProps) {
               />
             </div>
           </div>
-        </Swiper>
-      </div>
     </div>
+        
+      </div>
   );
 }

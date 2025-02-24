@@ -10,16 +10,17 @@ import { Swiper as SwiperClass } from "swiper";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 
-type SlideProps = {
-  setIsFirstScreen: (value: string) => void;
-};
-export default function A2Slide({ setIsFirstScreen }: SlideProps) {
+// type SlideProps = {
+//   setIsFirstScreen: (value: string) => void;
+// };
+export default function A2Slide() {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [lastSlide, setLastSlide] = useState<number>(0);
 
   const handleNext = () => {
     if (lastSlide == SlideData.length - 1) {
-      setIsFirstScreen("result");
+      // setIsFirstScreen("result");
+      return
     }
     swiperRef.current?.slideNext();
   };
@@ -35,8 +36,9 @@ export default function A2Slide({ setIsFirstScreen }: SlideProps) {
   return (
     <div className="bg-white min-h-screen flex items-center flex-col justify-center">
       <h1 className="text-center text-3xl py-4 text-black">
-        Lets review emotions!
-      </h1>
+{
+  SlideData[lastSlide].title
+}      </h1>
       <div className="w-[800px] px-2  ">
         <Swiper
           slidesPerView={1}
