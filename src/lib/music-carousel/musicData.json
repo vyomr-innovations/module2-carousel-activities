@@ -1,14 +1,26 @@
 [
     {
-        "music":"/music/first.mov"    },
+        "music":"/music/Baby_Shark.mov" ,
+        "name":"Baby Shark"
+    },
     {
-        "music":"/music/secound.mov"    },
+        "music":"/music/Catch_me.mov",
+           "name":"Catch me"
+    },
     {
-        "music":"/music/third.mov"    },
+        "music":"/music/What_are_you_doing_here.mov" ,
+      "name":"What are you doing here"
+    },
     {
-        "music":"/music/four.mov"    },
+        "music":"/music/little_curious.mov" ,
+    "name":"little curious"
+    },
     {
-        "music":"/music/five.mov"    },
+        "music":"/music/Fairy_Dreams.mov",
+      "name":"Fairy Dreams"
+    },
     {
-        "music":"/music/sixeth.mov"    }
+        "music":"/music/its_nonsense.mov" ,
+    "name":"its nonsense"
+    }
 ]

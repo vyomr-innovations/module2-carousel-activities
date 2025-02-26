@@ -61,8 +61,8 @@ const slide = useState(new Array(9).fill(null))[0]; // Setter hata diya
           </div>
         </div>
       ) : (
-        <>
-          <h2 className="text-black text-3xl text-center">A Little Curious</h2>
+        <div className="h-[500px] flex justify-center items-center flex-col">
+            <h2 className="text-black text-2xl text-center">{slideData.name}</h2>
           <Swiper
             className="w-[400px]"
             slidesPerView={1}
@@ -85,7 +85,7 @@ const slide = useState(new Array(9).fill(null))[0]; // Setter hata diya
             ))}
           </Swiper>
           <h2 className="text-black text-3xl  text-center"> Close your eyes</h2>
-        </>
+        </div>
       )}
     </div>
   );

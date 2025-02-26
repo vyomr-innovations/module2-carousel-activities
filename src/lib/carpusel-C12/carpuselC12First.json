@@ -1,0 +1,14 @@
+[
+    { "text1": "I believe in your swimming skills", "text2": "I trust you will be safe in the pool", "correctOption": 1 },
+    { "text1": "Sam keeps questioning all the time.", "text2": "Sam has a curious mind.", "correctOption": 2 },
+    { "text1": "This dress is marvellous!", "text2": "Oh, what a good dress!", "correctOption": 1 },
+    { "text1": "Captain, increase the team’s confidence", "text2": "Captain, boost the team’s confidence.", "correctOption": 2 },
+    { "text1": "I have an incredible view from my window.", "text2": "I have a great view from my window!", "correctOption": 1 },
+    { "text1": "Zola’s pet cat is adorable.", "text2": "Zola’s pet cat is cute.", "correctOption": 1 },
+    { "text1": "Let’s enhance our performance.", "text2": "Let’s power up our performance", "correctOption": 2 },
+    { "text1": "Garry is winning all the games", "text2": "Garry is unbeatable.", "correctOption": 2 },
+    { "text1": "The experience at the Sea World is memorable.", "text2": "The experience at the Sea World is unforgettable.", "correctOption": 1 },
+    { "text1": "Ron is a smart player.", "text2": "Ron is a sharp player.", "correctOption": 2 },
+    { "text1": "Bring the book back now.", "text2": "Bring the book back immediately.", "correctOption": 2 }
+
+  ]
