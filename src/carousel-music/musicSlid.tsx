@@ -54,7 +54,7 @@ const slide = useState(new Array(9).fill(null))[0]; // Setter hata diya
           <div className="col-span-12 py-5 flex items-center justify-center">
             <button
               onClick={handleNext}
-              className="bg-yellow-400 text-black text-xl px-8 py-2 rounded-lg flex items-center gap-2 shadow-black shadow-inner hover:scale-90"
+              className={` ${index <  MusicData.length -1 ? "block" :"hidden" } bg-yellow-400 text-black text-xl px-8 py-2 rounded-lg flex items-center gap-2 shadow-black shadow-inner hover:scale-90`}
             >
               Next
             </button>

@@ -65,21 +65,19 @@ export default function A2Slide() {
             </SwiperSlide>
           ))}
           <div className=" py-4 flex items-center justify-around  text-black">
-            <div
-              className={`border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400
-               `}
-            >
-              <FaArrowLeft
-                className="text-[40px]  cursor-pointer "
-                onClick={handlePerv}
-              />
-            </div>
-            <div
-              className={`border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400
-              `}
+           <div
+                        className={`${lastSlide > 0 ? "border border-black bg-yellow-400  shadow-inner shadow-[#000000b9]":""}  rounded-full p-3 hover:scale-90 `}
+                      >
+                        <FaArrowLeft
+                          className={`${lastSlide > 0 ? "block":"hidden"} text-[40px]  cursor-pointer` }
+                          onClick={handlePerv}
+                        />
+                      </div>
+                      <div
+              className={`${lastSlide < SlideData.length -1  ? "border border-black bg-yellow-400  shadow-inner shadow-[#000000b9]":""} rounded-full p-3  hover:scale-90 `}
             >
               <FaArrowRight
-                className="text-[40px] cursor-pointer "
+                className={`${lastSlide <SlideData.length - 1 ? "block":"hidden"} text-[40px]  cursor-pointer `}
                 onClick={handleNext}
               />
             </div>

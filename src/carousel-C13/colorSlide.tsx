@@ -62,7 +62,7 @@ const ColorSlide = () => {
       </Swiper>
       <div className=" absolute z-10 bottom-0 py-4 flex items-center justify-around  text-black w-full">
         <div
-          className={`border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400`}
+          className={`${lastSlide > 0 ? "block":"hidden"} border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400`}
         >
           <FaArrowLeft
             className="text-[40px]  cursor-pointer "
@@ -70,7 +70,7 @@ const ColorSlide = () => {
           />
         </div>
         <div
-          className={`border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400`}
+          className={` ${lastSlide < SlideData.length -1  ? "block":"hidden"} border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400`}
         >
           <FaArrowRight
             className="text-[40px]  cursor-pointer "

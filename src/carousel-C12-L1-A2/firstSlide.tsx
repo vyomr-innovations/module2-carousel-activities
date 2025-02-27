@@ -22,7 +22,7 @@ const GameFirstSlide = ({ setIsFirstSlid }: myProps) => {
         </div>
         <div>
           <ul className="list-disc space-y-5 text-xl">
-            <li>Synonyms words are simial in meaning to each other.</li>
+            <li>Synonyms words are similar in meaning to each other.</li>
             <li>Click to flip cards and match the synonyms words.</li>
             <li>If the cards do not match they will flip again.</li>
           </ul>

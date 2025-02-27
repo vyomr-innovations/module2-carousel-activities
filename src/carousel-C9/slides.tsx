@@ -60,19 +60,22 @@ export default function SlideStartSec() {
         
         </Swiper>
         <div className="py-4 flex items-center justify-between gap-10 w-full text-black">
+
             <div
-              className={`border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400`}
+              className={`${lastSlide > 0 ? "border border-black bg-yellow-400  shadow-inner shadow-[#000000b9]":""}  rounded-full p-3 hover:scale-90 `}
             >
               <FaArrowLeft
-                className="text-[40px]  cursor-pointer "
+                className={`${lastSlide > 0 ? "block":"hidden"} text-[40px]  cursor-pointer` }
                 onClick={handlePrv}
               />
             </div>
+
+
             <div
-              className={`border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400`}
+              className={`${lastSlide < SlideData.length -1  ? "border border-black bg-yellow-400  shadow-inner shadow-[#000000b9]":""} rounded-full p-3  hover:scale-90 `}
             >
               <FaArrowRight
-                className="text-[40px]  cursor-pointer "
+                className={`${lastSlide <SlideData.length - 1 ? "block":"hidden"} text-[40px]  cursor-pointer `}
                 onClick={handleNext}
               />
             </div>
