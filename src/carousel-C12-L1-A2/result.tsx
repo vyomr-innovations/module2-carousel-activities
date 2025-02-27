@@ -18,7 +18,7 @@ const GameResult = ({ setIsFirstSlid }: myProps) => {
               boxShadow: "2px 2px 1px #0000007c , inset 2px 2px 5px white ",
             }}
           >
-            Nice TRY!
+           WELL DONE
           </h3>
         </div>
         <div className="flex justify-center items-center flex-col gap-3">

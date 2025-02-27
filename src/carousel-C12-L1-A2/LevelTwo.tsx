@@ -6,17 +6,18 @@ type myProps = {
 };
 
 const cardData = [
-  { id: 1, value: "a", word: "Good" },
-  { id: 7, value: "d", word: "Cute" },
-  { id: 2, value: "b", word: "Increase " },
-  { id: 3, value: "c", word: "incredible" },
-  { id: 4, value: "b", word: "Boost" },
-  { id: 5, value: "c", word: "Breathtaking" },
-  { id: 6, value: "a", word: "marvellous" },
-  { id: 8, value: "d", word: "Adorable" },
+  { id: 1, value: "a", word: "Good", bg_color: "#4B164C" },
+  { id: 2, value: "a", word: "marvellous", bg_color: "#4B164C" },
+  { id: 3, value: "b", word: "Increase ", bg_color: "#872341" },
+  { id: 4, value: "b", word: "Boost", bg_color: "#872341" },
+  { id: 5, value: "c", word: "incredible", bg_color: "#5B913B" },
+  { id: 6, value: "c", word: "Breathtaking", bg_color: "#5B913B" },
+  { id: 7, value: "d", word: "Cute", bg_color: "#578E7E" },
+  { id: 8, value: "d", word: "Adorable", bg_color: "#578E7E" },
 ];
 
 const LevelTwo = ({ setIsFirstSlid }: myProps) => {
+  const [shuffelData, setShuffelData] = useState(cardData);
   const [selectedCards, setSelectedCards] = useState<
     { id: number; value: string }[]
   >([]);
@@ -24,7 +25,7 @@ const LevelTwo = ({ setIsFirstSlid }: myProps) => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]); // Track flipped cards
 
   const handleCheck = (card: { id: number; value: string }) => {
-    if (selectedCards.length === 2 || matchedCards.includes(card.id)) return;
+    if (selectedCards.length === 2 || matchedCards.includes(card.id) || selectedCards.some((e)=>e.id == card.id)) return;
 
     const newSelectedCards = [...selectedCards, card];
     setSelectedCards(newSelectedCards);
@@ -47,19 +48,32 @@ const LevelTwo = ({ setIsFirstSlid }: myProps) => {
     }
   };
 
+
+
   useEffect(() => {
     if (matchedCards.length === cardData.length) {
       setTimeout(() => {
         setIsFirstSlid("Level_3"); // Move to next screen
-      }, 1000);
+      }, 2000);
     }
   }, [matchedCards, setIsFirstSlid]);
 
+
+
+  // card suffel logic
+  const suffelArray = (array : typeof cardData)=>{
+    return array.sort(()=>Math.random() -0.5)
+  }
+
+
+  useEffect(()=>{
+    setShuffelData(suffelArray([...cardData]))
+  },[])
   return (
     <div className="min-h-screen bg-[#DCC352] flex justify-center items-center flex-col">
       <h3 className="text-2xl font-bold mb-4 text-black ">Level 2</h3>
       <div className="min-h-[500px] w-[850px]   grid grid-cols-12 place-items-center">
-        {cardData.map((item) => (
+        {shuffelData.map((item) => (
           <div
             key={item.id}
             className="card col-span-3"
@@ -73,7 +87,7 @@ const LevelTwo = ({ setIsFirstSlid }: myProps) => {
               }`}
               style={{
                 background: matchedCards.includes(item.id)
-                  ? "#89AC46"
+                  ? `${item.bg_color}`
                   : "#F08A5D",
                 borderRadius: "10px",
                 transform:

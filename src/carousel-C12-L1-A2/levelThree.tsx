@@ -6,19 +6,20 @@ type myProps = {
 };
 
 const cardData = [
-  { id: 1, value: "a", word: "Enhance" },
-  { id: 2, value: "d", word: "Smart" },
-  { id: 3, value: "b", word: "Unbeatable " },
-  { id: 4, value: "e", word: "Immediately" },
-  { id: 5, value: "c", word: "Memorable" },
-  { id: 6, value: "b", word: "Unstoppable" },
-  { id: 7, value: "c", word: "Unforgettable" },
-  { id: 8, value: "a", word: "Power up" },
-  { id: 9, value: "d", word: "Sharp" },
-  { id: 10, value: "e", word: "Now" },
+  { id: 1, value: "a", word: "Enhance", bg_color: "#213555" },
+  { id: 2, value: "a", word: "Power up", bg_color: "#213555" },
+  { id: 3, value: "b", word: "Unbeatable ", bg_color: "#441752" },
+  { id: 4, value: "b", word: "Unstoppable", bg_color: "#441752" },
+  { id: 5, value: "c", word: "Unforgettable", bg_color: "#54C392" },
+  { id: 6, value: "c", word: "Memorable", bg_color: "#54C392" },
+  { id: 7, value: "d", word: "Smart", bg_color: "#543A14" },
+  { id: 8, value: "d", word: "Sharp", bg_color: "#543A14" },
+  { id: 9, value: "e", word: "Immediately", bg_color: "#47663B" },
+  { id: 10, value: "e", word: "Now", bg_color: "#47663B" },
 ];
 
 const LevelThree = ({ setIsFirstSlid }: myProps) => {
+  const [shuffelData, setShuffelData] = useState(cardData);
   const [selectedCards, setSelectedCards] = useState<
     { id: number; value: string }[]
   >([]);
@@ -26,7 +27,7 @@ const LevelThree = ({ setIsFirstSlid }: myProps) => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]); // Track flipped cards
 
   const handleCheck = (card: { id: number; value: string }) => {
-    if (selectedCards.length === 2 || matchedCards.includes(card.id)) return;
+    if (selectedCards.length === 2 || matchedCards.includes(card.id) || selectedCards.some((e)=>e.id == card.id)) return;
 
     const newSelectedCards = [...selectedCards, card];
     setSelectedCards(newSelectedCards);
@@ -53,15 +54,24 @@ const LevelThree = ({ setIsFirstSlid }: myProps) => {
     if (matchedCards.length === cardData.length) {
       setTimeout(() => {
         setIsFirstSlid("result_page"); // Move to next screen
-      }, 1000);
+      }, 2000);
     }
   }, [matchedCards, setIsFirstSlid]);
+
+  // card suffel logic
+  const suffelArray = (array: typeof cardData) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
+
+  useEffect(() => {
+    setShuffelData(suffelArray([...cardData]));
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#DCC352] flex justify-center items-center flex-col">
       <h3 className="text-2xl font-bold mb-4 text-black ">Level 3</h3>
       <div className="min-h-[500px] w-full  grid grid-cols-10 place-items-center">
-        {cardData.map((item) => (
+        {shuffelData.map((item) => (
           <div
             key={item.id}
             className="card col-span-2"
@@ -75,7 +85,7 @@ const LevelThree = ({ setIsFirstSlid }: myProps) => {
               }`}
               style={{
                 background: matchedCards.includes(item.id)
-                  ? "#89AC46"
+                  ? `${item.bg_color}`
                   : "#F08A5D",
                 borderRadius: "10px",
                 transform:

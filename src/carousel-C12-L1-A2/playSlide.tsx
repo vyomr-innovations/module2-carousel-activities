@@ -6,15 +6,16 @@ type myProps = {
 };
 
 const cardData = [
-  { id: 1, value: "a", word: "Trust" },
-  { id: 2, value: "b", word: "Because" },
-  { id: 3, value: "c", word: "Curious" },
-  { id: 4, value: "b", word: "Since" },
-  { id: 5, value: "c", word: "Questioning" },
-  { id: 6, value: "a", word: "Trust" },
+  { id: 1, value: "a", word: "Trust", bg_color: "#89AC46" },
+  { id: 2, value: "a", word: "Believe", bg_color: "#89AC46" },
+  { id: 3, value: "b", word: "Because", bg_color: "#D98324" },
+  { id: 4, value: "b", word: "Since", bg_color: "#D98324" },
+  { id: 5, value: "c", word: "Curious", bg_color: "#00879E" },
+  { id: 6, value: "c", word: "Questioning", bg_color: "#00879E" },
 ];
 
 const PlaySlide = ({ setIsFirstSlid }: myProps) => {
+  const [shuffelData, setShuffelData] = useState(cardData);
   const [selectedCards, setSelectedCards] = useState<
     { id: number; value: string }[]
   >([]);
@@ -22,7 +23,7 @@ const PlaySlide = ({ setIsFirstSlid }: myProps) => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]); // Track flipped cards
 
   const handleCheck = (card: { id: number; value: string }) => {
-    if (selectedCards.length === 2 || matchedCards.includes(card.id)) return;
+    if (selectedCards.length === 2 || matchedCards.includes(card.id) || selectedCards.some((e)=>e.id == card.id)) return;
 
     const newSelectedCards = [...selectedCards, card];
     setSelectedCards(newSelectedCards);
@@ -49,15 +50,24 @@ const PlaySlide = ({ setIsFirstSlid }: myProps) => {
     if (matchedCards.length === cardData.length) {
       setTimeout(() => {
         setIsFirstSlid("Level_2"); // Move to next screen
-      }, 1000);
+      }, 2000);
     }
   }, [matchedCards, setIsFirstSlid]);
+
+  // card suffel logic
+  const suffelArray = (array: typeof cardData) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
+
+  useEffect(()=>{
+    setShuffelData(suffelArray([...cardData]))
+  },[])
 
   return (
     <div className="min-h-screen bg-[#DCC352] flex justify-center items-center flex-col">
       <h3 className="text-2xl font-bold mb-4 text-black ">Level 1</h3>
       <div className="min-h-[500px] w-[850px]   grid grid-cols-12 place-items-center">
-        {cardData.map((item) => (
+        {shuffelData.map((item) => (
           <div
             key={item.id}
             className="card col-span-4"
@@ -71,7 +81,7 @@ const PlaySlide = ({ setIsFirstSlid }: myProps) => {
               }`}
               style={{
                 background: matchedCards.includes(item.id)
-                  ? "#89AC46"
+                  ? `${item.bg_color}`
                   : "#F08A5D",
                 borderRadius: "10px",
                 transform:
