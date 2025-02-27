@@ -1,0 +1,37 @@
+[
+    {
+        "img":"/C13-L1-A2/trust.jpg",
+        "text":"Your peer has taken your pen without permission. You don’t go to your teacher to report. You wait for him to return and tell him to ask next time. He returns your pen and thanks you for understanding. What emotion did you feel?",
+        "answer":"Trust"
+    },
+    {
+        "img":"/C13-L1-A2/fear.jpg",
+        "text":"Your class teacher is not there. Your peers discuss strategies to bully another student in class. You do not want to bully, but are not sure how to intervene without getting bullied yourself. What emotion did you feel?",
+        "answer":"Fear"
+    } ,
+    {
+        "img":"/C13-L1-A2/surprise.png",
+        "text":"Your exam results are in. You’re expecting a lower mark. When the teacher hands your paper, you end up with a higher mark. What emotion did you feel?",
+        "answer":"Surprise"
+    },
+    {
+        "img":"/C13-L1-A2/sadness.jpg",
+        "text":"You are on your lunch break. All your peers are playing. You stand in a corner waiting for a peer to ask you to play, but the lunch break is over and you’re still alone. What emotion did you feel?",
+        "answer":"Sadness"
+    },
+    {
+        "img":"/C13-L1-A2/disgust.jpg",
+        "text":"School’s over. You walk out through a corridor with your peers. You notice the trash outside the garbage can, but your peers don’t. What emotion did you feel?",
+        "answer":"Disgust"
+    },
+    {
+        "img":"/C13-L1-A2/anger.jpg",
+        "text":"You’re playing football. Your peer repeatedly cheers when you miss a goal. It makes you want to score a goal even more, but it’s still annoying. What emotion did you feel?",
+        "answer":"Anger"
+    },
+     {
+        "img":"/C13-L1-A2/joy_2.png",
+        "text":"Your final results have come out and you’ve done very well. You’re excited to start the next year full of hope and possibilities. You’re very happy for your peers too. What emotion did you feel?",
+        "answer":"Joy"
+    }
+]
