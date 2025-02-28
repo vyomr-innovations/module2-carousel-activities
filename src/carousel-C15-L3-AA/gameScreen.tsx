@@ -38,13 +38,13 @@ const GameScreen = () => {
       <h3 className="text-black text-3xl">Self Determination Vocabulary</h3>
 
       {/* Draggable Buttons */}
-      <div className="w-[800px] flex flex-wrap gap-2 justify-center items-center">
+      <div className="w-[800px] flex flex-wrap gap-2 justify-center items-center border-black border border-dotted p-4">
         {category.map((item, index) => (
           <button
             key={index}
             draggable
             onDragStart={(e) => handleDrag(e, item)}
-            className="bg-purple-600 px-8 py-1 rounded-lg cursor-grab"
+            className="bg-[#ffc100] text-black px-8 py-1 rounded-lg cursor-grab"
           >
             {item.name}
           </button>
@@ -52,7 +52,7 @@ const GameScreen = () => {
       </div>
 
       {/* Drop Boxes */}
-      <div className="flex justify-center items-center gap-3">
+      <div className="flex justify-center items-center gap-3 py-8">
         {CardData.map((item, index) => (
           <div
             key={index}
@@ -64,7 +64,7 @@ const GameScreen = () => {
               {item.cardName}
             </h3>
             {dropPlace[item.cardName]?.map((droppedItem, i) => (
-              <div key={i} className="bg-white text-black p-1 rounded-lg">
+              <div key={i} className="bg-[#ffc100] text-black p-1 rounded-lg">
                 {droppedItem}
               </div>
             ))}
