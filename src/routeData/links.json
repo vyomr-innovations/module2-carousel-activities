@@ -87,5 +87,21 @@
     {
         "link":"C15-L1-A4",
         "activity":"Quiz"
+    } ,
+    {
+        "link":"C15-L2-A1",
+        "activity":"Tongue twisters"
+    },
+    {
+        "link":"C15-L3-A1",
+        "activity":"Tongue twisters"
+    } ,
+    {
+        "link":"C15-L3-A2A",
+        "activity":"Video of story"
+    },
+     {
+        "link":"C15-L2-A2A",
+        "activity":"Video of story"
     }
 ]
