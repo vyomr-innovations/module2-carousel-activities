@@ -6,16 +6,16 @@ type myProps = {
 };
 
 const cardData = [
-  { id: 1, value: "a", word: "Enhance", bg_color: "#E17564" },
-  { id: 2, value: "a", word: "Power up", bg_color: "#E17564" },
-  { id: 3, value: "b", word: "Unbeatable ", bg_color: "#574964" },
-  { id: 4, value: "b", word: "Unstoppable", bg_color: "#574964" },
-  { id: 5, value: "c", word: "Unforgettable", bg_color: "#809D3C" },
-  { id: 6, value: "c", word: "Memorable", bg_color: "#809D3C" },
-  { id: 7, value: "d", word: "Smart", bg_color: "#8174A0" },
-  { id: 8, value: "d", word: "Sharp", bg_color: "#8174A0" },
-  { id: 9, value: "e", word: "Immediately", bg_color: "#578E7E" },
-  { id: 10, value: "e", word: "Now", bg_color: "#578E7E" },
+  { id: 1, value: "a", word: "Enhance", bg_color: "#003161" },
+  { id: 2, value: "a", word: "Power up", bg_color: "#003161" },
+  { id: 3, value: "b", word: "Unbeatable ", bg_color: "#6A1E55" },
+  { id: 4, value: "b", word: "Unstoppable", bg_color: "#6A1E55" },
+  { id: 5, value: "c", word: "Unforgettable", bg_color: "#31511E" },
+  { id: 6, value: "c", word: "Memorable", bg_color: "#31511E" },
+  { id: 7, value: "d", word: "Smart", bg_color: "#181C14" },
+  { id: 8, value: "d", word: "Sharp", bg_color: "#181C14" },
+  { id: 9, value: "e", word: "Immediately", bg_color: "#FF8225" },
+  { id: 10, value: "e", word: "Now", bg_color: "#FF8225" },
 ];
 
 const LevelThree = ({ setIsFirstSlid }: myProps) => {
