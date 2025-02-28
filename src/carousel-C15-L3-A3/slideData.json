@@ -1,0 +1,16 @@
+[
+    {   "title":"Autonomy",
+        "Qustion":" you choose your path to achieve your goals",
+        "image":"/C15L1A1B/book_img.jpg"
+    },
+    {
+        "title":"Relatedness",
+        "Qustion":"you feel inspired by what’s around you",
+         "image":"/C15L1A1B/book_img2.jpg"
+    },
+    {
+        "title":"Competence",
+        "Qustion":"Competence: you become best knowing you can still improve",
+         "image":"/C15L1A1B/book_img3.jpg"
+    } 
+]
