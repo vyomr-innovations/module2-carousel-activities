@@ -1,0 +1,50 @@
+[
+    {
+        "name":"Self-motivation",
+        "value":"Autonomy"
+    },
+    {
+        "name":"problem-solving",
+        "value":"Autonomy"
+    },
+     {
+        "name":"time-management",
+        "value":"Autonomy"
+    },
+    {
+        "name":"grit",
+        "value":"Autonomy"
+    } ,
+    {
+        "name":"empathy",
+        "value":"Relatedness"
+    } 
+    , {
+        "name":"compassion",
+        "value":"Relatedness"
+    },
+    {
+        "name":"inspired thinking",
+        "value":"Relatedness"
+    },
+    {
+        "name":"team-building",
+        "value":"Relatedness"
+    },
+    {
+        "name":"self-confidence",
+        "value":"Competence"
+    },
+    {
+        "name":"risk-taking",
+        "value":"Competence"
+    },
+    {
+        "name":"determination",
+        "value":"Competence"
+    },
+    {
+        "name":"learner’s attitude",
+        "value":"Competence"
+    }
+]
