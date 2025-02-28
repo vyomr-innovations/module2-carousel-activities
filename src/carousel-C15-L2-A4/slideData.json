@@ -1,0 +1,21 @@
+[
+    {   
+        "Qustion":"Take out a pen and a piece of paper.",
+        "image":"/C15L1A1B/paper.jpg"
+    },
+    {
+       
+        "Qustion":"Sign it at the bottom.",
+         "image":"/C15L1A1B/mirror.jpg"
+    },
+    {
+      
+        "Qustion":"Write “GOALS” at the top. This is what you want.",
+         "image":"/C15L1A1B/goals.jpg"
+    },
+     {
+      
+        "Qustion":"Now write “STEPS.” This is what you need to do to achieve your goal.",
+         "image":"/C15L1A1B/steps.jpg"
+    }
+]
