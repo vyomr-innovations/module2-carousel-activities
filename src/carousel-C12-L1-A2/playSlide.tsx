@@ -15,6 +15,8 @@ const cardData = [
 ];
 
 const PlaySlide = ({ setIsFirstSlid }: myProps) => {
+
+  const FlipSound = new Audio("/sounds/flip.mp3")
   const [shuffelData, setShuffelData] = useState(cardData);
   const [selectedCards, setSelectedCards] = useState<
     { id: number; value: string }[]
@@ -23,6 +25,7 @@ const PlaySlide = ({ setIsFirstSlid }: myProps) => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]); // Track flipped cards
 
   const handleCheck = (card: { id: number; value: string }) => {
+    FlipSound.play();
     if (selectedCards.length === 2 || matchedCards.includes(card.id) || selectedCards.some((e)=>e.id == card.id)) return;
 
     const newSelectedCards = [...selectedCards, card];
