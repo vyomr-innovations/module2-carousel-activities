@@ -16,7 +16,8 @@ const cardData = [
 
 const PlaySlide = ({ setIsFirstSlid }: myProps) => {
 
-  const FlipSound = new Audio("/sounds/flip.mp3")
+  const FlipSound = new Audio("/sound/flip.mp3")
+  const correct = new Audio("/sound/correct.mp3")
   const [shuffelData, setShuffelData] = useState(cardData);
   const [selectedCards, setSelectedCards] = useState<
     { id: number; value: string }[]
@@ -39,6 +40,8 @@ const PlaySlide = ({ setIsFirstSlid }: myProps) => {
           newSelectedCards[0].id,
           newSelectedCards[1].id,
         ]);
+        FlipSound.pause()
+        correct.play();
       }
       setTimeout(() => {
         setSelectedCards([]);

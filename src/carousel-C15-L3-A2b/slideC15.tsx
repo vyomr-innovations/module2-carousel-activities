@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SlideData from "@/carousel-C15-L3-A3/slideData.json";
+import SlideData from "@/carousel-C15-L3-A2b/slideData.json";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import { Swiper as SwiperClass } from "swiper";

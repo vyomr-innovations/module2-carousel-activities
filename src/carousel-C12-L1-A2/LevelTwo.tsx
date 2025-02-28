@@ -17,6 +17,8 @@ const cardData = [
 ];
 
 const LevelTwo = ({ setIsFirstSlid }: myProps) => {
+  const FlipSound = new Audio("/sound/flip.mp3");
+  const correct = new Audio("/sound/correct.mp3");
   const [shuffelData, setShuffelData] = useState(cardData);
   const [selectedCards, setSelectedCards] = useState<
     { id: number; value: string }[]
@@ -25,7 +27,13 @@ const LevelTwo = ({ setIsFirstSlid }: myProps) => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]); // Track flipped cards
 
   const handleCheck = (card: { id: number; value: string }) => {
-    if (selectedCards.length === 2 || matchedCards.includes(card.id) || selectedCards.some((e)=>e.id == card.id)) return;
+    FlipSound.play();
+    if (
+      selectedCards.length === 2 ||
+      matchedCards.includes(card.id) ||
+      selectedCards.some((e) => e.id == card.id)
+    )
+      return;
 
     const newSelectedCards = [...selectedCards, card];
     setSelectedCards(newSelectedCards);
@@ -38,6 +46,8 @@ const LevelTwo = ({ setIsFirstSlid }: myProps) => {
           newSelectedCards[0].id,
           newSelectedCards[1].id,
         ]);
+        FlipSound.pause();
+        correct.play();
       }
       setTimeout(() => {
         setSelectedCards([]);
@@ -48,8 +58,6 @@ const LevelTwo = ({ setIsFirstSlid }: myProps) => {
     }
   };
 
-
-
   useEffect(() => {
     if (matchedCards.length === cardData.length) {
       setTimeout(() => {
@@ -58,17 +66,14 @@ const LevelTwo = ({ setIsFirstSlid }: myProps) => {
     }
   }, [matchedCards, setIsFirstSlid]);
 
-
-
   // card suffel logic
-  const suffelArray = (array : typeof cardData)=>{
-    return array.sort(()=>Math.random() -0.5)
-  }
+  const suffelArray = (array: typeof cardData) => {
+    return array.sort(() => Math.random() - 0.5);
+  };
 
-
-  useEffect(()=>{
-    setShuffelData(suffelArray([...cardData]))
-  },[])
+  useEffect(() => {
+    setShuffelData(suffelArray([...cardData]));
+  }, []);
   return (
     <div className="min-h-screen bg-[#DCC352] flex justify-center items-center flex-col">
       <h3 className="text-2xl font-bold mb-4 text-black ">Level 2</h3>

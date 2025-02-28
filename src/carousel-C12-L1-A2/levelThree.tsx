@@ -19,6 +19,8 @@ const cardData = [
 ];
 
 const LevelThree = ({ setIsFirstSlid }: myProps) => {
+  const FlipSound = new Audio("/sound/flip.mp3");
+  const correct = new Audio("/sound/correct.mp3");
   const [shuffelData, setShuffelData] = useState(cardData);
   const [selectedCards, setSelectedCards] = useState<
     { id: number; value: string }[]
@@ -27,6 +29,7 @@ const LevelThree = ({ setIsFirstSlid }: myProps) => {
   const [flippedCards, setFlippedCards] = useState<number[]>([]); // Track flipped cards
 
   const handleCheck = (card: { id: number; value: string }) => {
+    FlipSound.play();
     if (selectedCards.length === 2 || matchedCards.includes(card.id) || selectedCards.some((e)=>e.id == card.id)) return;
 
     const newSelectedCards = [...selectedCards, card];
@@ -40,6 +43,8 @@ const LevelThree = ({ setIsFirstSlid }: myProps) => {
           newSelectedCards[0].id,
           newSelectedCards[1].id,
         ]);
+        FlipSound.pause();
+        correct.play();
       }
       setTimeout(() => {
         setSelectedCards([]);

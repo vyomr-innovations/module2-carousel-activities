@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import SlideC15 from "./slideC15";
 import Start from "./start";
 
-const CarousalC15L3A3= () => {
+const CarousalC15L3A2b= () => {
   const [isFirstScreen, setIsFirstScreen] = useState("Start");
   return (
     <div>
@@ -15,4 +15,4 @@ const CarousalC15L3A3= () => {
   );
 };
 
-export default CarousalC15L3A3;
+export default CarousalC15L3A2b;
