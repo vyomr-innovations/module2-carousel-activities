@@ -1,0 +1,46 @@
+[
+    {
+        "image":"/C15L1A1B/mirror.jpg",
+        "Qustion":"Who motivated Vashti to paint dots?",
+        "Answers":[
+            {
+                "A":"Her parents",
+                "B":"Her teacher",
+                "C":"Her friends"
+            }
+        ]
+    },
+    {
+        "image":"/C15L1A1B/Quiz_img2.jpg",
+        "Qustion":"How many dots did Vashti paint?",
+        "Answers":[
+            {
+                "A":"1",
+                "B":"4",
+                "C":"More than 6"
+            }
+        ]
+    },
+    {
+        "image":"/C15L1A1B/Quiz_img3.jpg",
+        "Qustion":"Why did Vashti paint many dots?",
+        "Answers":[
+            {
+                "A":"Her teacher asked her to",
+                "B":"Her friend wanted for an exhibition",
+                "C":"To learn and see"
+            }
+        ]
+    },
+     {
+        "image":"/C15L1A1B/Quiz_img4.jpg",
+        "Qustion":"To achieve goals, you need to be:",
+        "Answers":[
+            {
+                "A":"Determined",
+                "B":"Fast",
+                "C":"The best"
+            }
+        ]
+    }
+]

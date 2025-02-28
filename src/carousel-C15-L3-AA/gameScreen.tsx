@@ -44,7 +44,7 @@ const GameScreen = () => {
             key={index}
             draggable
             onDragStart={(e) => handleDrag(e, item)}
-            className="bg-[#ffc100] text-black px-8 py-1 rounded-lg cursor-grab"
+            className="capitalize bg-[#ffc100] text-black px-8 py-1 rounded-lg cursor-grab"
           >
             {item.name}
           </button>
@@ -64,7 +64,7 @@ const GameScreen = () => {
               {item.cardName}
             </h3>
             {dropPlace[item.cardName]?.map((droppedItem, i) => (
-              <div key={i} className="bg-[#ffc100] text-black p-1 rounded-lg">
+              <div key={i} className="capitalize bg-[#ffc100] text-black p-1 rounded-lg">
                 {droppedItem}
               </div>
             ))}
