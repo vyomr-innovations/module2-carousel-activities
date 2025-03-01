@@ -1,0 +1,27 @@
+[
+    {
+        "image":"/C16/kind_img.jpg",
+        "title":"When we are polite",
+        "subTitle":"we are kind."
+    },
+    {
+        "image":"/C16/red_cap_men.jpg",
+        "title":"When we are polite",
+        "subTitle":"we are nice."
+    },
+    {
+        "image":"/C16/cooperate_img.jpg",
+        "title":"When we are polite",
+        "subTitle":"we cooperate."
+    },
+     {
+        "image":"/C16/404.png",
+        "title":"When we are polite",
+        "subTitle":"we are respectful."
+    },
+    {
+        "image":"/C16/better_place_img.jpg",
+        "title":"When we are polite",
+        "subTitle":"we make the world a better place"
+    }
+]
