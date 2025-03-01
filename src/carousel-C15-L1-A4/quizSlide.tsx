@@ -12,7 +12,9 @@ import Image from "next/image";
 
 
 export default function QuizSlide() {
+  const correctSound = new Audio("/sound/correct.mp3")
   const swiperRef = useRef<SwiperClass | null>(null);
+  const [correct,setCorrect]=useState<string>()
   const [lastSlide, setLastSlide] = useState<number>(0);
 
   const handleNext = () => {
@@ -28,6 +30,18 @@ export default function QuizSlide() {
   const handleChange = (swipe: SwiperClass) => {
     setLastSlide(swipe.activeIndex);
   };
+
+const handleAnswer =(ans : string,index:number)=>{
+ setCorrect(SlideData[index]?.correct)
+if(correct == ans ){
+  correctSound.play()
+ setTimeout(()=>{
+  swiperRef.current?.slideNext();
+ },1000)
+}
+
+}
+
   return (
     <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="w-[950px] px-2">
@@ -56,9 +70,9 @@ export default function QuizSlide() {
                 {
                     SlideData[index].Answers.map((i,Answerindex)=>(
                        <div key={Answerindex} className=" text-md text-white flex flex-col  gap-5">
-                        <button className="bg-blue-700 px-5 py-1 rounded-lg border border-black">{i.A}</button>
-                        <button className="bg-blue-700 px-5 py-1 rounded-lg border border-black">{i.B}</button>
-                        <button className="bg-blue-700 px-5 py-1 rounded-lg border border-black">{i.C}</button>
+                        <button className="bg-blue-700 px-5 py-1 rounded-lg border border-black" onClick={()=>handleAnswer(i.A,index)}>{i.A}</button>
+                        <button className="bg-blue-700 px-5 py-1 rounded-lg border border-black" onClick={()=>handleAnswer(i.B,index)}>{i.B}</button>
+                        <button className="bg-blue-700 px-5 py-1 rounded-lg border border-black" onClick={()=>handleAnswer(i.C,index)}>{i.C}</button>
                        </div>
                     ))
                 }
