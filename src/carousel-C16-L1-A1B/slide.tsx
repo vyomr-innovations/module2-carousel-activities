@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SlideData from "@/carousel-C16-L1-A2A/slideData.json";
+import SlideData from "@/carousel-C16-L1-A1B/slideData.json";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import { Swiper as SwiperClass } from "swiper";

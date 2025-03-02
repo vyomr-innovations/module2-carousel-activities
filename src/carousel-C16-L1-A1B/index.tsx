@@ -4,7 +4,7 @@ import StrartSlide from './start'
 import ImageSlide from './slide'
 import VideoSlide from './video'
 
-const CarouselC16L1A2A = () => {
+const CarouselC16L1A1B = () => {
     const [isFirstScreen,setIsFirstScreen] =useState("strartSlide")
     return (
       <div>
@@ -15,4 +15,4 @@ const CarouselC16L1A2A = () => {
     )
 }
 
-export default CarouselC16L1A2A
+export default CarouselC16L1A1B
