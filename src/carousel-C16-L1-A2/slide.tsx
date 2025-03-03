@@ -49,10 +49,10 @@ export default function Slide() {
           {SlideData.map((item, index) => (
             <SwiperSlide key={index} className="">
               <div className="flex flex-col gap-4 pt-2">
-              <h2 className="text-center text-3xl  text-blue-700">
+              <h2 className="text-center text-4xl  text-blue-700">
                {item.title}
               </h2>
-              <h2 className="text-center text-2xl  text-green-600">
+              <h2 className="text-center text-5xl  text-green-600">
                 {item.subTitle}
               </h2>
               <div className="h-[400px]  relative">
