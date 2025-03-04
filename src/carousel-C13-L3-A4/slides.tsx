@@ -3,25 +3,24 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SlideData from "@/lib/carousel-C13-A3/slideData.json";
+import SlideData from "@/carousel-C13-L3-A4/slideData.json";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import { Swiper as SwiperClass } from "swiper";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 
-// type SlideProps = {
-//   setIsFirstScreen: (value: string) => void;
-// };
-export default function SlideStartSec() {
+type SlideProps = {
+  setIsFirstScreen: (value: string) => void;
+};
+export default function SlideStartSec({ setIsFirstScreen }: SlideProps) {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [lastSlide, setLastSlide] = useState<number>(0);
 
   const handleNext = () => {
     swiperRef.current?.slideNext();
     if (lastSlide == SlideData.length - 1) {
-      // setIsFirstScreen("result");
-      return
+      setIsFirstScreen("result");
     }
   };
 
@@ -40,7 +39,7 @@ export default function SlideStartSec() {
     <div className="bg-white min-h-screen flex items-center justify-center">
       <Swiper
           slidesPerView={1}
-          loop={false}
+          loop={true}
           autoplay={false}
           allowTouchMove={false}
           modules={[Navigation]}
@@ -49,23 +48,17 @@ export default function SlideStartSec() {
         >
           {SlideData.map((item, index) => (
             <SwiperSlide key={index}>
-              <h1 className="text-center text-3xl py-4 text-black">
-                {item.title}
-              </h1>
-              <div className="grid grid-cols-12 w-[900px] mx-auto border border-black rounded-lg ">
-                <div className="col-span-6 relative w-full h-[400px]  flex justify-center items-center   overflow-hidden rounded-lg"> 
+              <div className=" w-[800px] mx-auto border border-black rounded-lg ">
+              <div className="relative w-full h-[450px] flex justify-center items-center   overflow-hidden rounded-lg">
                 <Image
                   src={item.image}
-                  className="rounded-lg object-cover"
+                  className="rounded-lg object-contain"
                  fill
                   alt="slider image"
                 />
+                
               </div>
-                <div className="col-span-6  w-full flex items-center justify-center">
-                <p className=" w-full text-black p-4 text-3xl text-center rounded-lg">
-                  {item.text}
-                </p>
-                </div>
+               
 
               </div>
              
@@ -73,18 +66,18 @@ export default function SlideStartSec() {
           ))}
           <div className=" py-4 flex items-center justify-around  text-black">
             <div
-              className={`${lastSlide > 0 ? "border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] bg-yellow-400" :""} hover:scale-90 `}
+              className={`${lastSlide > 0 ? "border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400":""}`}
             >
               <FaArrowLeft
-                className={`${lastSlide > 0 ? "block" : "hidden"} text-[40px]  cursor-pointer `}
+                className={`${lastSlide > 0 ? "block":"hidden"} text-[40px]  cursor-pointer ` }
                 onClick={handlePrv}
               />
             </div>
             <div
-              className={`${lastSlide < SlideData.length -1  ? "border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] bg-yellow-400" :""} hover:scale-90 `}
+              className={`${lastSlide < SlideData.length -1  ? "border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400":""}`}
               >
               <FaArrowRight
-                className={`${lastSlide < SlideData.length -1 ? "block":"hidden"} text-[40px]  cursor-pointer `}
+                className={`${lastSlide < SlideData.length -1  ? "block":"hidden"} text-[40px]  cursor-pointer `}
                 onClick={handleNext}
               />
             </div>

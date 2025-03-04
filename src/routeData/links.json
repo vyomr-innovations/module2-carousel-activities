@@ -114,5 +114,24 @@
     },{
         "link":"C16-L1-A2",
         "activity":"When we are polite"
+    },{
+        "link":"C13-L3-A4",
+        "activity":"summary"
+    },
+    {
+        "link":"C16-L1-A5",
+        "activity":"Polite or no or No"
+    },
+    {
+        "link":"C13-L3-A3",
+        "activity":"How I feel?"
+    },
+    {
+        "link":"C16-L1-AA",
+        "activity":"How do you feel? "
+    },
+    {
+        "link":"C16-L1-A4",
+        "activity":"What do you do?"
     }
 ]

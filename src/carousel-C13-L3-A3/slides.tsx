@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SlideData from "@/lib/carousel-C13-A3/slideData.json";
+import SlideData from "@/carousel-C13-L3-A3/slideData.json";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import { Swiper as SwiperClass } from "swiper";
@@ -62,7 +62,7 @@ export default function SlideStartSec() {
                 />
               </div>
                 <div className="col-span-6  w-full flex items-center justify-center">
-                <p className=" w-full text-black p-4 text-3xl text-center rounded-lg">
+                <p className=" w-full text-black p-4 text-2xl text-center rounded-lg">
                   {item.text}
                 </p>
                 </div>

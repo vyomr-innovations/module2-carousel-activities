@@ -1,0 +1,42 @@
+[
+    {
+        "image":"/C16/hold_the_door.jpg",
+        "text":"You enter the classroom and there’s a girl behind you.",
+        "value":"Hold the door."
+    },
+    {
+        "image":"/C16/the_bin.jpg",
+        "text":"You finished lunch and there’s a chocolate wrapper on the floor.",
+        "value":"Throw it in the bin."
+    } ,
+    {
+        "image":"/C16/raise_your_hand.jpg",
+        "text":"The teacher is speaking and you’ve a question.",
+        "value":"Raise your hand."
+    },
+    {
+        "image":"/C16/finish_speking.jpg",
+        "text":"Your parents are talking and you want something.",
+        "value":"Wait till they finish speaking."
+    },
+    {
+        "image":"/C16/borrow_pencil.jpg",
+        "text":"You’d like to borrow a pencil from your peer.",
+        "value":"Ask “may I borrow a pencil please?"
+    } ,
+    {
+        "image":"/C16/welcom_cam.jpg",
+        "text":"There are guests in your home.",
+        "value":"Welcome and be calm."
+    },
+    {
+        "image":"/C16/nice_to_meet.jpg",
+        "text":"You meet someone for the first time.",
+        "value":"Say “nice to meet you."
+    },
+    {
+        "image":"/C16/thankYou.jpg",
+        "text":"Someone gives you a present.",
+        "value":"Say “thank you."
+    }
+]

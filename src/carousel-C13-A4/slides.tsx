@@ -49,16 +49,15 @@ export default function SlideStartSec({ setIsFirstScreen }: SlideProps) {
           {SlideData.map((item, index) => (
             <SwiperSlide key={index}>
               <div className=" w-[800px] mx-auto border border-black rounded-lg ">
-              <div className="relative flex justify-center items-center   overflow-hidden rounded-lg">
-                <Image
-                  src={item.image}
-                  className="rounded-lg"
-                  height={200}
-                  width={400}
-                  alt="slider image"
-                />
-                
-              </div>
+              <div className="relative w-full h-[450px] flex justify-center items-center   overflow-hidden rounded-lg">
+                             <Image
+                               src={item.image}
+                               className="rounded-lg object-contain"
+                              fill
+                               alt="slider image"
+                             />
+                             
+                           </div>
                
 
               </div>

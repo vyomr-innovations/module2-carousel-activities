@@ -57,7 +57,7 @@ const EmotionBar = ({ item }: myProps) => {
         </div>
       ))}
       {rightAnswer ? (
-        <BRAVOModle open={open} setOpen={setOpen} />
+        <BRAVOModle open={open} setOpen={setOpen} src={"/C13-L1-A2/Bravo.jpg"}/>
       ) : (
         <KeepTryingModel open={open} setOpen={setOpen} />
       )}

@@ -1,16 +1,16 @@
 "use client";
 import BRAVOModle from "@/components/brovomodle";
 import KeepTryingModel from "@/components/KeepTryingModel";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Emotins = [
-  { name: "Trust" },
-  { name: "Fear" },
-  { name: "Surprise" },
-  { name: "Sadness" },
-  { name: "Disgust" },
-  { name: "Anger" },
-  { name: "Joy" },
+  { name: "Surprise.",img:"/emojis/Surprise.png" },
+  { name: "Anticipation",img:"/emojis/Anticipation.png" },
+  { name: "Happy",img:"/emojis/Happy.png" },
+  { name: "Disgust",img:"/emojis/Disgust.png" },
+  { name: "Angry",img:"/emojis/Angry.png" },
+  
 ];
 
 interface myProps {
@@ -50,10 +50,13 @@ const EmotionBar = ({ item }: myProps) => {
           key={index}
           className={`cursor-pointer ${
             selected === item.name ? "bg-green-400" : "bg-yellow-400"
-          } w-[200px] px-5 py-2 text-black rounded-lg shadow-inner shadow-[#000000a3] font-bold tex-lg text-center hover:scale-95`}
+          } w-[200px] px-5 py-2 min-h-[50px] flex justify-center items-center text-black rounded-lg shadow shadow-[#000000a3] font-bold text-lg text-center hover:scale-95`}
           onClick={() => handleCheck(item.name)}
         >
-          {item.name}
+          <h3>{item.name}</h3>
+         <div className="relative w-[60px] h-[60px] ">
+         <Image src={item.img} fill className="" alt=""/>
+         </div>
         </div>
       ))}
       {rightAnswer ? (

@@ -13,9 +13,10 @@ import Image from "next/image";
 type myProps ={
 open:boolean;
 setOpen:( value :boolean)=>void;
+src:string
 }
 
-const BRAVOModle = ({open,setOpen}:myProps) => {
+const BRAVOModle = ({open,setOpen,src}:myProps) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
     <DialogContent className="">
@@ -23,7 +24,7 @@ const BRAVOModle = ({open,setOpen}:myProps) => {
         <DialogTitle className="text-center text-2xl">BRAVO!</DialogTitle>
         <DialogDescription className="flex  justify-center items-center">
           <Image
-            src="/C13-L1-A2/Bravo.jpg"
+            src={src}
             width={300}
             height={200}
             alt="modle image"

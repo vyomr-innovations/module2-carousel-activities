@@ -1,0 +1,34 @@
+[
+    {
+        "option1":"Hold the door.",
+        "option2":"Shut the door on her face."
+    },
+    {
+        "option1":"Throw it in the bin.",
+        "option2":"Leave it on the floor."
+    },
+    {
+        "option1":"Interrupt the teacher.",
+        "option2":"Raise your hand."
+    },
+    {
+        "option1":"Make noise to get their attention.",
+        "option2":"Wait till they finish speaking."
+    },
+    {
+        "option1":"Ask “may I borrow a pencil please?",
+        "option2":"Shut the door on her face."
+    },
+    {
+        "option1":"Welcome and be calm.",
+        "option2":"Be noisy."
+    },
+    {
+        "option1":"Say nothing.",
+        "option2":"Say “nice to meet you."
+    },
+    {
+        "option1":"Say nothing",
+        "option2":"Say “thank you."
+    }
+]

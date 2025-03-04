@@ -1,0 +1,42 @@
+[
+    {
+        "image":"/crousel-1-images/1.jpg",
+        "text":"Lali shouts in class.",
+        "value":"Thumbs down"
+    },
+    {
+        "image":"/crousel-1-images/2.jpg",
+        "text":"Petra leaves a mess in the living room.",
+        "value":"Thumbs up"
+    } ,
+    {
+        "image":"/crousel-1-images/3.jpg",
+        "text":"Fanny raises her hand.",
+        "value":"Thumbs down"
+    },
+    {
+        "image":"/crousel-1-images/4.jpg",
+        "text":"Dingo helps parents set the table.",
+        "value":"Thumbs up"
+    },
+    {
+        "image":"/crousel-1-images/5.jpg",
+        "text":"Flavio slams the door on another student.",
+        "value":"Thumbs down"
+    } ,
+    {
+        "image":"/crousel-1-images/6.jpg",
+        "text":"Clara asks a question with please and thank you.",
+        "value":"Thumbs up"
+    },
+    {
+        "image":"/crousel-1-images/7.jpg",
+        "text":" Dorothy throws garbage outside the bin.",
+        "value":"Thumbs up"
+    },
+    {
+        "image":"/crousel-1-images/8.jpg",
+        "text":"Victoria plants a seed.",
+        "value":"Thumbs up"
+    }
+]
