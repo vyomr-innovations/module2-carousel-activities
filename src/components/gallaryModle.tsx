@@ -20,17 +20,16 @@ type myProps ={
 const GallaryModle = ({open,setOpen,img}:myProps) => {
   return (
     <Dialog  open={open} onOpenChange={setOpen}>
-    <DialogContent  className="max-w-[800px] w-full bg-[#00000067] backdrop-blur-sm text-black ">
+    <DialogContent  className="min-w-[800px] w-full min-h-[500px]  bg-[#00000067] backdrop-blur-sm text-black ">
       <DialogHeader>
         <DialogTitle></DialogTitle>
         <DialogDescription className="flex  justify-center items-center">
-        <div className="w-full max-w-[380px]"> 
+        <div className="relative w-full min-w-[300px] min-h-[500px] h-full"> 
               <Image
                 src={img}
-                width={800} // Image Fixed Width
-                height={600} // Image Fixed Height
+               fill // Image Fixed Height
                 alt="modal image"
-                className="w-full rounded-lg object-cover" // Image Responsive aur Rounded
+                className="w-full rounded-lg object-contain" // Image Responsive aur Rounded
               />
             </div>
         </DialogDescription>
