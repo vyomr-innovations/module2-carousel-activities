@@ -11,17 +11,13 @@ import EmotionBar from "./emotionBar";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 
-type SlideProps = {
-  setIsFirstScreen: (value: string) => void;
-};
-export default function A2Slide({ setIsFirstScreen }: SlideProps) {
+
+export default function A2Slide() {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [lastSlide, setLastSlide] = useState<number>(0);
 
   const handleNext = () => {
-    if (lastSlide == SlideData.length - 1) {
-      setIsFirstScreen("emotionImage");
-    }
+
     swiperRef.current?.slideNext();
   };
 
@@ -37,7 +33,7 @@ export default function A2Slide({ setIsFirstScreen }: SlideProps) {
     <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="w-[900px] px-2">
         <h1 className="text-center text-3xl py-4 text-black">
-          Lets review emotions!
+        How do you feel? 
         </h1>
         <Swiper
           slidesPerView={1}
@@ -48,6 +44,39 @@ export default function A2Slide({ setIsFirstScreen }: SlideProps) {
           onSlideChange={handleChange}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
+          <SwiperSlide>
+            <div className="grid grid-cols-12 gap-[50px]">
+              <div className="col-span-8 h-full  relative  flex justify-center items-end  shadow-md  overflow-hidden rounded-lg">
+                <div className=" relative w-full h-[450px] ">
+                  <Image
+                    src="/C16/garbegeCan.jpg"
+                    className="rounded-lg object-contain"
+                    fill
+                    alt="slider image"
+                  />
+                </div>
+
+                <div className=" relative w-full h-[450px]">
+                  <Image
+                    src="/C16/angryEmoji.jpg"
+                    className="rounded-lg object-contain"
+                    fill
+                    alt="slider image"
+                  />
+                </div>
+               
+                <h1
+                  className={`absolute 
+                      bg-[#000000e5] text-white w-full p-4 text-center z-10 rounded-lg  top-0`}
+                >
+                  Your peer throws garbage outside the garbage can.
+                </h1>
+              </div>
+              <div className="col-span-4 w-full">
+                <EmotionBar item={"Angry"} />
+              </div>
+            </div>
+          </SwiperSlide>
           {SlideData.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="grid grid-cols-12 gap-[50px]">
@@ -58,9 +87,10 @@ export default function A2Slide({ setIsFirstScreen }: SlideProps) {
                     fill
                     alt="slider image"
                   />
+
                   <h1
                     className={`absolute 
-                      bg-[#000000e5] w-full p-4 text-center z-10 rounded-lg  top-0`}
+                      bg-[#000000e5] text-white w-full p-4 text-center z-10 rounded-lg  top-0`}
                   >
                     {item.text}
                   </h1>
@@ -73,20 +103,28 @@ export default function A2Slide({ setIsFirstScreen }: SlideProps) {
           ))}
           <div className=" py-4 flex items-center justify-around  text-black">
             <div
-              className={` ${lastSlide > 0 ? "border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] bg-yellow-400":"" } hover:scale-90 
+              className={` ${
+                lastSlide > 0
+                  ? "border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] bg-yellow-400"
+                  : ""
+              } hover:scale-90 
                `}
             >
               <FaArrowLeft
-                className={`${lastSlide > 0 ? "block" :"hidden"} text-[40px]  cursor-pointer `}
+                className={`${
+                  lastSlide > 0 ? "block" : "hidden"
+                } text-[40px]  cursor-pointer `}
                 onClick={handlePerv}
               />
             </div>
             <div
-              className={`border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] hover:scale-90 bg-yellow-400
-              `}
+              className={`${lastSlide >= 0 && lastSlide <SlideData.length ? "border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] bg-yellow-400"
+                : ""
+            } hover:scale-90 
+             `}
             >
               <FaArrowRight
-                className="text-[40px] cursor-pointer "
+                className={` ${lastSlide >= 0 && lastSlide <SlideData.length ? "block" :"hidden"} text-[40px] cursor-pointer `}
                 onClick={handleNext}
               />
             </div>

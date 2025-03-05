@@ -1,37 +1,22 @@
 [
     {
-        "img":"",
-        "text":"Your peer throws garbage outside the garbage can.",
-        "answer":"Angry"
-    },
-    {
-        "img":"",
+        "img":"/C16/speekLoud.jpg",
         "text":"Your peer shouts in the classroom while the teacher is speaking.",
-        "answer":"Disgust."
+        "answer":"Disgust"
     } ,
     {
-        "img":"",
+        "img":"/C16/hold_the_door.jpg",
         "text":"Someone holds the door for you.",
-        "answer":"Happy."
+        "answer":"Happy"
     },
     {
-        "img":"",
+        "img":"/C16/borrow_pencil.jpg",
         "text":"A peer asks to borrow a pencil and says please and thank you.",
-        "answer":"Anticipation."
+        "answer":"Anticipation"
     },
     {
-        "img":"",
+        "img":"/C16/thankYou.jpg",
         "text":"Your parents give you a present for practicing good social etiquettes all year.",
         "answer":"Surprise."
-    },
-    {
-        "img":"/C13-L1-A2/anger.jpg",
-        "text":"I make you feel furious and strong-headed. What emotion am I?",
-        "answer":"Anger"
-    },
-     {
-        "img":"/C13-L1-A2/joy_2.png",
-        "text":"I make you feel happy and positive. What emotion am I?",
-        "answer":"Joy"
     }
 ]

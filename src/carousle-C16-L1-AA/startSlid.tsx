@@ -14,7 +14,7 @@ const StartSlid = ({ setIsFirstScreen }: SlideProps) => {
     <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="w-[500px] ">
         <div>
-        <p className="text-center text-lg py-4 text-black ">Ready for a challenge? Read the descriptors and guess the corresponding emotions from the coloured circles.
+        <p className="text-center text-lg py-4 text-black ">How would you feel? Show me an emotion when someone is polite or impolite to you or around you.
         </p>
           <div className="p-5 relative text-black flex justify-center items-center  shadow-md shadow-black overflow-hidden rounded-lg">
            <Image src="/C13-L1-A2/main_image.jpg" width={300} height={200} alt="image"/>

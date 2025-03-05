@@ -54,8 +54,8 @@ const EmotionBar = ({ item }: myProps) => {
           onClick={() => handleCheck(item.name)}
         >
           <h3>{item.name}</h3>
-         <div className="relative w-[60px] h-[60px] ">
-         <Image src={item.img} fill className="" alt=""/>
+         <div className=" ">
+         <Image src={item.img} width={60} height={60}  alt="emoji"/>
          </div>
         </div>
       ))}
