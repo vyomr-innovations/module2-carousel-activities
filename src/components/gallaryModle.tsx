@@ -19,7 +19,7 @@ type myProps = {
 const GallaryModle = ({ open, setOpen, img }: myProps) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="min-w-[800px] w-full min-h-[500px]  bg-[#00000067] backdrop-blur-sm text-black ">
+      <DialogContent className="min-w-[90%] w-full min-h-[500px]  bg-[#00000067] backdrop-blur-sm text-black ">
         <DialogHeader>
           <DialogTitle></DialogTitle>
           <DialogDescription className="flex  justify-center items-center">

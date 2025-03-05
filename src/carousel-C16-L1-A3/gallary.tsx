@@ -4,9 +4,9 @@ import React, { useState } from "react";
 
 const Gallary = () => {
   const [open, setOpen] = useState(false);
-  const [img,setImg]=useState("")
-  const handleClick = (imgUrl:string) => {
-    setImg(imgUrl)
+  const [img, setImg] = useState("");
+  const handleClick = (imgUrl: string) => {
+    setImg(imgUrl);
     setOpen(true);
   };
   return (
@@ -14,16 +14,16 @@ const Gallary = () => {
       <h3 className="text-4xl text-center min-h-[80px] text-black">
         Etiquettes
       </h3>
-      <div className="grid grid-cols-12 gap-5  h-[300px] place-items-center">
+      <div className="grid grid-cols-12 gap-[80px]  h-[300px] place-items-center">
         <div className="col-span-6">
           <div
-            onClick={()=>handleClick("/C16/home_rule.jpg")}
-            className="relative w-[160px] h-[160px] bg-red-500 rounded-lg overflow-hidden shadow-md shadow-black cursor-pointer hover:scale-105"
+            onClick={() => handleClick("/C16/home_rule.jpg")}
+            className="relative w-[300px] h-[240px] bg-[#ffca4a] overflow-hidden rounded-lg shadow-md  shadow-black cursor-pointer hover:scale-105  "
           >
             <Image
               src="/C16/home_rule.jpg"
               fill
-              className="object-cover"
+              className="object-contain"
               alt="gallery"
             />
           </div>
@@ -32,13 +32,13 @@ const Gallary = () => {
 
         <div className="col-span-6">
           <div
-            onClick={()=>handleClick("/C16/class_rule.jpg")}
-            className="relative w-[160px] h-[160px] bg-red-500 rounded-lg overflow-hidden shadow-md shadow-black cursor-pointer hover:scale-105"
+            onClick={() => handleClick("/C16/class_rule.jpg")}
+            className="relative w-[300px] h-[240px] bg-[#ffca4a] overflow-hidden rounded-lg shadow-md  shadow-black cursor-pointer hover:scale-105  "
           >
             <Image
               src="/C16/class_rule.jpg"
               fill
-              className="object-cover"
+              className="object-contain"
               alt="gallery"
             />
           </div>
