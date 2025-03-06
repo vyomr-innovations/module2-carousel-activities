@@ -1,47 +1,56 @@
 [
     {   
         "text":"You enter the classroom and there’s a girl behind you. ",
-      
-        "image":"/C16/hold_the_door.jpg"
+        "image":"/C16/hold_the_door.jpg",
+        "answer":"All"
     },
     {
        
         "text":"You finished lunch and there’s a chocolate wrapper on the floor.",
-         "image":"/C16/the_bin.jpg"
+         "image":"/C16/the_bin.jpg",
+         "answer":"All"
     },
     {
         
         "text":"The teacher is speaking and you’ve a question.",
-         "image":"/C16/raise_your_hand.jpg"
+         "image":"/C16/raise_your_hand.jpg",
+         "answer":"School"
     },
      {
         
         "text":"Your parents are talking and you want something. ",
-         "image":"/C16/finish_speking.jpg"
+         "image":"/C16/finish_speking.jpg",
+         "answer":"Home"
     },
       {
         
         "text":"You’d like to borrow a pencil from your peer.",
-         "image":"/C16/borrow_pencil.jpg"
+         "image":"/C16/borrow_pencil.jpg",
+         "answer":"School"
     },
       {
         
         "text":"There are guests in your home.",
-         "image":"/C16/welcom_cam.jpg"
+         "image":"/C16/welcom_cam.jpg",
+         "answer":"Home"
     },
       {
         
         "text":"You meet someone for the first time.",
-         "image":"/C16/nice_to_meet.jpg"
+         "image":"/C16/nice_to_meet.jpg",
+         "answer":"All"
+         
     },
       {
         
         "text":"Someone gives you a present.",
-         "image":"/C16/thankYou.jpg"
-    },
-      {
-        
-        "text":"A peer you don’t get along with has been put in the same team.",
-         "image":"/C16/thankYou.jpg"
+         "image":"/C16/thankYou.jpg",
+         "answer":"All"
+        },
+        {
+          
+          "text":"A peer you don’t get along with has been put in the same team.",
+          "image":"/C16/thankYou.jpg",
+          "answer":"School"
     } 
 ]
