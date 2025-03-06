@@ -19,18 +19,23 @@ type myProps = {
   >;
 };
 
-export default function SlideC15({setIsFirstScreen,result,setResult}:myProps) {
+export default function SlideC15({
+  setIsFirstScreen,
+  result,
+  setResult,
+}: myProps) {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [lastSlide, setLastSlide] = useState<number>(0);
   const [right, setRight] = useState<number | null>(null);
   const [wrong, setWrong] = useState<number | null>(null);
   const [time, setTime] = useState(30);
   const [over, setOver] = useState<boolean>(false);
-
+  const clock = new Audio("sound/clock.mp3");
+  const correctAns = new Audio("sound/correct.mp3");
 
   const handleNext = () => {
-    if (lastSlide == SlideData.length -1) {
-     setIsFirstScreen("result") 
+    if (lastSlide == SlideData.length - 1) {
+      setIsFirstScreen("result");
     }
     swiperRef.current?.slideNext();
     setWrong(null);
@@ -43,11 +48,13 @@ export default function SlideC15({setIsFirstScreen,result,setResult}:myProps) {
   };
 
   useEffect(() => {
+    clock.play();
     const interval = setInterval(() => {
       setTime((prevTime) => {
         if (prevTime === 1) {
           clearInterval(interval);
           setOver(true);
+          clock.pause();
 
           return 0;
         }
@@ -79,15 +86,17 @@ export default function SlideC15({setIsFirstScreen,result,setResult}:myProps) {
         return updatedResult;
       });
       setRight(index);
-      // setTime(30)
     } else {
       setWrong(index);
     }
   };
 
   useEffect(() => {
-    console.log(result);
-  }, [result]);
+    // console.log(result);
+    if (over && right) {
+      correctAns.play();
+    }
+  },[over, right]);
 
   return (
     <div className="bg-white min-h-screen flex items-center justify-center">
@@ -124,23 +133,25 @@ export default function SlideC15({setIsFirstScreen,result,setResult}:myProps) {
                       <button
                         disabled={over ? true : false}
                         className={`${
-                          right == indx
+                          right == indx && over
                             ? " bg-green-500 "
-                            : wrong === indx
+                            : wrong === indx && over
                             ? "bg-red-600"
+                            : i.a === SlideData[lastSlide].answer && over
+                            ? "bg-green-500"
                             : "bg-yellow-400"
-                        }  min-w-[150px] text-black text-lg rounded-lg text-center relative`}
+                        }  min-w-[150px] text-black text-lg rounded-lg text-center relative focus:border-2 focus:border-black`}
                         onClick={() => handleCheck(i.a, indx)}
                       >
                         {i.a}
                         <h4
                           className={` ${
-                            right == indx
+                            right == indx && over
                               ? "block text-green-600 "
-                              : wrong === indx
+                              : wrong === indx && over
                               ? "block text-red-500"
                               : "hidden"
-                          }  absolute right-[-130px] top-0 text-black  `}
+                          }  absolute right-[-130px] top-0 text-black   `}
                         >
                           {right == indx
                             ? "Correct Answer"
@@ -148,13 +159,26 @@ export default function SlideC15({setIsFirstScreen,result,setResult}:myProps) {
                             ? "Wrong Answer"
                             : ""}
                         </h4>
+
+                        {over && i.a === SlideData[lastSlide].answer && (
+                          <h4 className="block text-green-600 absolute right-[-130px] top-0 ">
+                            Correct Answer
+                          </h4>
+                        )}
                       </button>
                     </div>
                   ))}
-
-                  <h4 className="text-black text-3xl ">
-                    {over ? "Time is over" : time}
-                  </h4>
+                  <div>
+                    {!over ? (
+                      <h4 className="p-1 flex justify-center items-center text-black border-2 timer border-green-400 text-3xl w-[70px] h-[70px] rounded-full relative ">
+                        <span className="text-black font-bold "> {time}</span>
+                      </h4>
+                    ) : (
+                      <h4 className="text-4xl  text-black font-bold ">
+                        Time is over
+                      </h4>
+                    )}
+                  </div>
                 </div>
               </div>
             </SwiperSlide>

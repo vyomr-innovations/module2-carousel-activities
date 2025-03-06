@@ -10,6 +10,7 @@ import { Swiper as SwiperClass } from "swiper";
 // import EmotionBar from "./emotionBar";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
+import Image from "next/image";
 
 // type SlideProps = {
 //   setIsFirstScreen: (value: string) => void;
@@ -50,8 +51,8 @@ export default function SlideC15() {
         >
           {SlideData.map((item, index) => (
             <SwiperSlide key={index} className="border-2">
-              <div className="flex items-center justify-center w-full h-full">
-                <img src="/C15L1A1B/mirror.jpg" alt="image" />
+              <div className="relative  flex items-center justify-center w-full h-[450px]">
+                <Image fill src="/C15L1A1B/mirror.jpg" className="object-contain" alt="image" />
                 <h3 className="w-[800px] absolute text-black text-xl font-bold bottom-[80px]">
                   {item.Qustion}
                 </h3>

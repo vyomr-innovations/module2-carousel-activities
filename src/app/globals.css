@@ -77,3 +77,11 @@ background: transparent;
 background: none;
 }
 
+.timer::after{
+content: "";
+position: absolute;
+width: 95%;
+height: 95%;
+border-radius: 100%;
+border: 2px solid red;
+}
