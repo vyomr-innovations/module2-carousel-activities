@@ -1,0 +1,22 @@
+[
+    {
+        "image":"/C16/kind_img.jpg",
+        "value":"we are kind."
+    },
+    {
+        "image":"/C16/red_cap_men.jpg",
+        "value":"we are nice."
+    } ,
+    {
+        "image":"/C16/cooperate_img.jpg",
+        "value":"we cooperate."
+    },
+    {
+        "image":"/C16/respectful_img.jpg",
+        "value":"we are respectful."
+    },
+    {
+        "image":"/C16/better_place_img.jpg",
+        "value":"we make the world a better place."
+    } 
+]
