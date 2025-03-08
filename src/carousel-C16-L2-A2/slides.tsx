@@ -17,6 +17,7 @@ import KeepTryingModel from "@/components/KeepTryingModel";
 export default function SlideStart() {
   const [open, setOpen] = useState(false);
   const [rightAnswer, setRightAnswer] = useState(true);
+    const [corect,setCorrect]=useState<null |number>(null)
 
   const swiperRef = useRef<SwiperClass | null>(null);
   const [lastSlide, setLastSlide] = useState<number>(0);
@@ -31,8 +32,10 @@ export default function SlideStart() {
     setCorrectAudio(new Audio("/sound/correct.mp3"));
   }, []);
 
-  const HandleChek = (val: string) => {
+  const HandleChek = (val: string,index:number) => {
+
     if (val === SlideData[lastSlide].value) {
+      setCorrect(index)
       correctAudio?.play();
       setOpen(true);
       setRightAnswer(true);
@@ -50,6 +53,7 @@ export default function SlideStart() {
     setLastSlide(swipe.activeIndex);
     if (lastSlide == SlideData.length - 1) return;
     //  setIsFirstScreen("result");
+    setCorrect(null);
   };
 
   return (
@@ -72,15 +76,15 @@ export default function SlideStart() {
               <div className="flex justify-center items-center flex-col  gap-3 w-full p-3 text-black">
                 <div className="   flex justify-center items-center ">
                   <div className="relative w-[500px] h-[400px]">
-                  <Image src={item.image} fill alt="image" />
+                  <Image src={item.image} fill alt="image" className="object-contain" />
                   </div>
                 </div>
                 <div className="  flex  gap-2 justify-center items-center flex-wrap ">
                   {
-                    optionData.map((i,ind)=>(
-                      <h2 key={ind} onClick={()=>HandleChek(i.option1)} className="cursor-pointer bg-yellow-400 min-h-[30px]  min-w-[250px] px-8 py-1 rounded-lg text-center shadow-md shadow-black">{i.option1}</h2>
-                    ))
-                  }
+                                      optionData.map((i,ind)=>(
+                                        <h2 key={ind} onClick={()=>HandleChek(i.option1,ind)} className={`${corect == ind ? "bg-green-500":"bg-yellow-400"} cursor-pointer  min-h-[30px]  min-w-[250px] px-8 py-1 rounded-lg text-center shadow-md shadow-black`}>{i.option1}</h2>
+                                      ))
+                                    }
                 </div>
               </div>
             </SwiperSlide>
