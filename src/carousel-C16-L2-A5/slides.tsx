@@ -7,6 +7,7 @@ import SlideData from "@/carousel-C16-L2-A5/slideData.json";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import { Swiper as SwiperClass } from "swiper";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 // type SlideProps = {
 //   setIsFirstScreen: (value: string) => void;
@@ -24,6 +25,16 @@ export default function SlideStart() {
   useEffect(() => {
     setCorrectAudio(new Audio("/sound/correct.mp3"));
   }, []);
+  const handlePerv = () => {
+    if (lastSlide == 0) return;
+    swiperRef.current?.slidePrev();
+  };
+  const handleNext = () => {
+    if (lastSlide == SlideData.length - 1) {
+      //   setIsFirstScreen("emotionImage");
+    }
+    swiperRef.current?.slideNext();
+  };
 
   const HandleYes = (val: string) => {
     if (SlideData[lastSlide]?.value === val) {
@@ -53,8 +64,8 @@ export default function SlideStart() {
   return (
     <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="w-[900px] ">
-        <h1 className="text-center text-3xl  min-h-[100px] py-4 text-black">
-          Polite or not
+        <h1 className="text-center text-3xl  min-h-[60px] py-4 text-black">
+        Polite or Not
         </h1>
         <Swiper
           slidesPerView={1}
@@ -68,15 +79,15 @@ export default function SlideStart() {
           {SlideData.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="grid grid-cols-12 w-full h-full  border p-2 rounded-lg">
-                <div className="col-span-6  w-full h-full relative">
-                  <h3 className="text-white text-xl text-center bg-black absolute w-full">
+                <div className="col-span-6  w-full h-[400px] relative">
+                  <h3 className="text-white text-xl text-center  absolute w-full">
                     {item.text}
                   </h3>
                   <Image
                     src={item.image}
+                    fill
                     className="rounded-lg object-cover"
-                    width={800}
-                    height={200}
+                    
                     alt="slider image"
                   />
                 </div>
@@ -127,6 +138,38 @@ export default function SlideStart() {
               </div>
             </SwiperSlide>
           ))}
+          <div className=" py-4 flex items-center justify-around  text-black">
+                      <div
+                        className={` ${
+                          lastSlide > 0
+                            ? "border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] bg-yellow-400"
+                            : ""
+                        } hover:scale-90 
+                         `}
+                      >
+                        <FaArrowLeft
+                          className={`${
+                            lastSlide > 0 ? "block" : "hidden"
+                          } text-[40px]  cursor-pointer `}
+                          onClick={handlePerv}
+                        />
+                      </div>
+                      <div
+                        className={` ${
+                          lastSlide < SlideData.length - 1
+                            ? "border border-black rounded-full p-3 shadow-inner shadow-[#000000b9] bg-yellow-400"
+                            : ""
+                        } hover:scale-90 
+                         `}
+                      >
+                        <FaArrowRight
+                          className={`${
+                            lastSlide < SlideData.length - 1 ? "block" : "hidden"
+                          } text-[40px]  cursor-pointer `}
+                          onClick={handleNext}
+                        />
+                      </div>
+                    </div>
         </Swiper>
       </div>
     </div>
