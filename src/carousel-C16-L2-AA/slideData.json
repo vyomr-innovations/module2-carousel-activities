@@ -1,0 +1,27 @@
+[
+    {
+        "text":"Your peer throws garbage outside the garbage can.",
+        "image":"/C16/garbegeCan.jpg"
+
+    },
+    {
+        "text":"Your peer shouts in the classroom while the teacher is speaking.",
+        "image":"/C16/speekLoud.jpg"
+
+    },
+    {
+        "text":"Someone holds the door for you.",
+        "image":"/C16/hold_the_door.jpg"
+
+    },
+    {
+        "text":"A peer asks to borrow a pencil and says please and thank you.",
+        "image":"/C16/borrow_pencil.jpg"
+
+    },
+    {
+        "text":"Your parents give you a present for practicing good social etiquettes all year.",
+        "image":"/C16/thankYou.jpg"
+
+    }
+]
