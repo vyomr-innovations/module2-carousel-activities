@@ -1,4 +1,6 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
+
 
 type myProps = {
   setIsFirstScreen: (value: string) => void;
@@ -19,7 +21,7 @@ const VideoSlide = ({ setIsFirstScreen }: myProps) => {
           className="text-[30px]  cursor-pointer text-black"
           onClick={() => setIsFirstScreen("imageSlide")}
         >
-          Start
+          <FaArrowRight/>
         </h3>
       </div>
     </div>
