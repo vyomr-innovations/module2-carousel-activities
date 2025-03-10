@@ -29,6 +29,7 @@ const BRAVOModle = ({open,setOpen,src}:myProps) => {
             height={200}
             alt="modle image"
             className="rounded-lg"
+            unoptimized
           />
         </DialogDescription>
       </DialogHeader>
