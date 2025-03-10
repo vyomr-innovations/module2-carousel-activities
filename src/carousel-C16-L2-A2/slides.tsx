@@ -92,7 +92,7 @@ export default function SlideStart() {
         </Swiper>
       </div>
       {rightAnswer ? (
-        <BRAVOModle open={open} setOpen={setOpen} src={"/C16/Bravo.jpg"} />
+        <BRAVOModle open={open} setOpen={setOpen} src={"/C16/correctBrovo_img.jpg"} />
       ) : (
         <KeepTryingModel open={open} setOpen={setOpen} />
       )}

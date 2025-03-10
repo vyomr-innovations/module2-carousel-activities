@@ -77,7 +77,7 @@ export default function SlideStart() {
                   fill
                   alt="slider image"
                 />
-                <h1 className="absolute bg-[#000000d0] w-full p-4 text-center z-10 rounded-lg  bottom-0 text-white">
+                <h1 className="absolute bg-[#000000c6] w-full p-4 text-center z-10 rounded-lg  bottom-0 text-white">
                   {item.text}
                 </h1>
               </div>
@@ -110,7 +110,7 @@ export default function SlideStart() {
         </Swiper>
       </div>
       {rightAnswer ? (
-        <BRAVOModle open={open} setOpen={setOpen} src={"/C16/Bravo.jpg"} />
+        <BRAVOModle open={open} setOpen={setOpen} src={"/C16/correctBrovo_img.jpg"} />
       ) : (
         <KeepTryingModel open={open} setOpen={setOpen} />
       )}
