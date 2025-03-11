@@ -52,7 +52,7 @@ export default function SlideStartSec() {
           {SlideData.map((item, index) => (
             <SwiperSlide key={index} className=" relative w-full h-full bg-cover bg-no-repeat bg-center "
             style={{ backgroundImage: `url(${item.image})`}}>
-                <h1 className="absolute bg-[#000000d4] w-full p-4 text-center z-10 rounded-lg  bottom-0">
+                <h1 className="absolute bg-[#000000d4] text-white w-full p-4 text-center z-10 rounded-lg  bottom-0">
                   {item.text}
                 </h1>
             </SwiperSlide>

@@ -77,7 +77,7 @@ export default function SlideStart() {
                   fill
                   alt="slider image"
                 />
-                <h1 className="absolute bg-[#000000c6] w-full p-4 text-center z-10 rounded-lg  bottom-0 text-white">
+                <h1 className="absolute  bg-[#000000da] w-full p-4 text-center z-10 rounded-lg  bottom-0 text-white">
                   {item.text}
                 </h1>
               </div>

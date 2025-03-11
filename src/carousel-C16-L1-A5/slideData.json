@@ -5,27 +5,27 @@
         "value":"Thumbs down"
     },
     {
-        "image":"/C16/.jpg",
+        "image":"/C16/living_room.jpg",
         "text":"Petra leaves a mess in the living room.",
         "value":"Thumbs up"
     } ,
     {
-        "image":"/C16/.jpg",
+        "image":"/C16/Fanny.jpg",
         "text":"Fanny raises her hand.",
         "value":"Thumbs down"
     },
     {
-        "image":"/C16/.jpg",
+        "image":"/C16/Dingo.jpg",
         "text":"Dingo helps parents set the table.",
         "value":"Thumbs up"
     },
     {
-        "image":"/C16/.jpg",
+        "image":"/C16/Flavio.jpg",
         "text":"Flavio slams the door on another student.",
         "value":"Thumbs down"
     } ,
     {
-        "image":"/C16/.jpg",
+        "image":"/C16/thankyou2.jpg",
         "text":"Clara asks a question with please and thank you.",
         "value":"Thumbs up"
     },
@@ -35,7 +35,7 @@
         "value":"Thumbs up"
     },
     {
-        "image":"/C16/.jpg",
+        "image":"/C16/seeds.jpg",
         "text":"Victoria plants a seed.",
         "value":"Thumbs up"
     }

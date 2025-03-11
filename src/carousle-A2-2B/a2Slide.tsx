@@ -59,7 +59,7 @@ export default function A2Slide({ setIsFirstScreen }: SlideProps) {
                     alt="slider image"
                   />
                   <h1
-                    className={`absolute 
+                    className={`absolute text-white 
                       bg-[#000000e5] w-full p-4 text-center z-10 rounded-lg  top-0`}
                   >
                     {item.text}
