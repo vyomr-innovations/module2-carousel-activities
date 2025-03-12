@@ -1,0 +1,46 @@
+[
+    {
+        "text":" You enter the classroom and there’s a girl behind you.",
+        "image":"/C16/hold_the_door.jpg"
+
+    },
+    {
+        "text":"You finished lunch and there’s a chocolate wrapper on the floor.",
+        "image":"/C16/the_bin.jpg"
+
+    },
+    {
+        "text":"The teacher is speaking and you’ve a question.",
+        "image":"/C16/raise_your_hand.jpg"
+
+    },
+    {
+        "text":"Your parents are talking and you want something. ",
+        "image":"/C16/finish_speking.jpg"
+
+    },
+    {
+        "text":"You’d like to borrow a pencil from your peer.",
+        "image":"/C16/borrow_pencil.jpg"
+
+    },{
+        "text":"There are guests in your home.",
+        "image":"/C16/welcom_cam.jpg"
+
+    },
+    {
+        "text":"You meet someone for the first time.",
+        "image":"/C16/nice_to_meet.jpg"
+
+    },
+    {
+        "text":"Someone gives you a present.",
+        "image":"/C16/thankYou.jpg"
+
+    },
+     {
+        "text":"A peer you don’t get along with has been put in the same team.",
+        "image":"/C16/same_team.jpg"
+
+    }
+]
