@@ -74,7 +74,7 @@ export default function SlideStart() {
     <div className="bg-white min-h-screen flex items-center justify-center">
       <div className="w-[600px] ">
         <h1 className="text-center text-3xl py-4 text-black">
-        Brave or Not Brave </h1>
+        Polite or Not? </h1>
         <Swiper
           slidesPerView={1}
           loop={false}
