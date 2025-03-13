@@ -52,7 +52,7 @@ export default function SlideC15L3A5() {
           
           {SlideData.map((item, index) => (
             <SwiperSlide key={index}  >
-                <h3 className="text-black text-2xl text-center">{item.text}</h3>
+                <h3 className="text-black text-2xl text-center py-5">{item.text}</h3>
                 <div className="col-span-6 h-[300px]  relative border border-black  ">
                   <Image
                     src={item.image}
@@ -61,7 +61,7 @@ export default function SlideC15L3A5() {
                     className="object-contain object-center"
                   />
                   <div className={`${blur ? "backdrop-blur-none" :"backdrop-blur-lg "} w-full h-full absolute top-0 left-0 flex justify-center items-center `}>
-                    <button onClick={handleBlur} className={` ${blur ? "hidden":"block"} bg-[#000000cc] px-8 py-2 rounded-lg `}>Do you know who said it?</button>
+                    <button onClick={handleBlur} className={` ${blur ? "hidden":"block"} bg-[#000000cc] text-white px-8 py-2 rounded-lg `}>Do you know who said it?</button>
                   </div>
                 </div>
                 <h3 className={`${blur ? "block":"hidden"} text-black text-2xl text-center`}>How does it reflect determination?</h3>
