@@ -1,0 +1,26 @@
+[
+    {
+        "music":"/music/Baby_Shark.mov" ,
+        "name":"Baby Shark"
+    },
+    {
+        "music":"/music/Catch_me.mov",
+           "name":"Catch me"
+    },
+    {
+        "music":"/music/What_are_you_doing_here.mov" ,
+      "name":"What are you doing here"
+    },
+    {
+        "music":"/music/little_curious.mov" ,
+    "name":"little curious"
+    },
+    {
+        "music":"/music/Fairy_Dreams.mov",
+      "name":"Fairy Dreams"
+    },
+    {
+        "music":"/music/its_nonsense.mov" ,
+    "name":"its nonsense"
+    }
+]
