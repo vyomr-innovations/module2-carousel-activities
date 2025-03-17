@@ -1,0 +1,18 @@
+[
+   
+    {
+        "image":"/C13-L1-A3/school.jpg",
+        "text":"You’re at school. You have spilled water all over your pants. When your peers notice this, they start laughing at you. What is your best emotional response?",
+        "title":"Situation A"
+    } ,
+    {
+        "image":"/C13-L1-A3/brother_sister_needpix.png",
+        "text":" You’re at home. Your sister arrives from school. She has won a competition. She is excited to share this good news with the family, but not you. What is your best emotional response?",
+        "title":"Situation B"
+    },
+    {
+        "image":"/C13-L1-A3/stranger.jpg",
+        "text":"You’re walking in the city. A stranger approaches to tell you that you look beautiful. You generally don’t talk to strangers without your parents’ around for safety reasons. What is your best emotional response?",
+        "title":"Situation C"
+    }
+]

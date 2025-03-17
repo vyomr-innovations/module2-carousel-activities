@@ -34,21 +34,29 @@
     },
     {
         "link":"C13-L2-A2-2A",
-        "activity":"Sound to show these emotions?..."
+        "activity":"Recognise emotions"
     },
     
     {
         "link":"C13-L2-A2-2B",
-        "activity":"Corresponding emotions from the coloured circles."
+        "activity":"Guess the emotion"
+    },
+    {
+        "link":"C13-L2-A3",
+        "activity":"How I feel?"
     },
     {
         "link":"C13-L3-AA",
         "activity":"Let's practice empathy"
     },
+      {
+        "link":"C13-L3-A2A",
+        "activity":"Recognise emotions"
+    },
 
     {
         "link":"C13-L3-A2B",
-        "activity":"Corresponding emotions from the coloured circles."
+        "activity":"Guess the emotion."
     },
     {
         "link":"C13-L3-A3",
