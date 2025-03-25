@@ -2,17 +2,17 @@
 import React, { useState } from 'react'
 import A22ASlide from './a2Slide'
 import StartSlid from './startSlid'
-import EmotinsImage from './emotinsImage'
+// import Result2B from './result'
 
-const CrouselA22B = () => {
+const CrouselA22A = () => {
   const [isFirstScreen,setIsFirstScreen] =useState("strartSlid")
   return (
     <div>
       {isFirstScreen == "strartSlid" && <StartSlid setIsFirstScreen={setIsFirstScreen}/>}
-      {isFirstScreen == "slide" && <A22ASlide setIsFirstScreen={setIsFirstScreen}/>}
-      {isFirstScreen == "emotionImage" && <EmotinsImage />}
+      {isFirstScreen == "slide" && <A22ASlide />}
+      {/* {isFirstScreen == "result" && <Result2B setIsFirstScreen={setIsFirstScreen}/>} */}
     </div>
   )
 }
 
-export default CrouselA22B
+export default CrouselA22A

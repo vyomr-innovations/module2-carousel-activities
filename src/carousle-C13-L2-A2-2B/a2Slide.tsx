@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SlideData from "@/lib/carousle-A2-2B/slideData.json";
+import SlideData from "@/carousle-C13-L2-A2-2B/slideData.json";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import { Swiper as SwiperClass } from "swiper";

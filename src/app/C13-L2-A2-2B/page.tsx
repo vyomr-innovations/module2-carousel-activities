@@ -1,10 +1,10 @@
-import CrouselA22B from '@/carousle-A2-2B'
+import CrouselC13L2A22B from '@/carousle-C13-L2-A2-2B'
 import React from 'react'
 
 const Page = () => {
   return (
     <div>
-      <CrouselA22B/>
+      <CrouselC13L2A22B/>
     </div>
   )
 }

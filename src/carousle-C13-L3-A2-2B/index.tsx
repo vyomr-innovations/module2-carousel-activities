@@ -4,7 +4,7 @@ import StartSlid from './startSlid'
 import EmotinsImage from './emotinsImage'
 import C13L1A2Slide from './a2Slide'
 
-const CrouselC13L1A22B = () => {
+const CrouselC13L3A22B = () => {
   const [isFirstScreen,setIsFirstScreen] =useState("strartSlid")
   return (
     <div>
@@ -15,4 +15,4 @@ const CrouselC13L1A22B = () => {
   )
 }
 
-export default CrouselC13L1A22B
+export default CrouselC13L3A22B

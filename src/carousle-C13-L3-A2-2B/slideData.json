@@ -33,5 +33,10 @@
         "img":"/C13-L1-A2/joy_2.png",
         "text":"Your final results have come out and you’ve done very well. You’re excited to start the next year full of hope and possibilities. You’re very happy for your peers too. What emotion did you feel?",
         "answer":"Joy"
+    },
+     {
+        "img":"/C13-L1-A2/girlImg.png",
+        "text":"You’ve applied for a scholarship for a programme. All your peers have gotten their results, and some of your close friends got in too. You patiently look forward to your turn. What emotion did you feel?",
+        "answer":"Joy"
     }
 ]

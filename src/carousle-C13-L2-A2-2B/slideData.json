@@ -1,0 +1,33 @@
+[
+    
+    {
+        "img":"/C13-L1-A2/fear.jpg",
+        "text":"I make you feel stressed and agitated. I am a warning for you to be aware of something at risk. I help you protect what you care about. What emotion am I?",
+        "answer":"Fear"
+    } ,
+    {
+        "img":"/C13-L1-A2/surprise.png",
+        "text":"I evoke a sense of unexpectedness with a heart-pounding response in you. I indicate that something new has happened. I help you pay attention to the here and now. What emotion am I?",
+        "answer":"Surprise"
+    },
+    {
+        "img":"/C13-L1-A2/sadness.jpg",
+        "text":"I make you feel a little bummed out and heavy. Sometimes I make you cry because you might feel an absence of love around you. I help you focus on what really matters in life. What emotion am I?",
+        "answer":"Sadness"
+    },
+    {
+        "img":"/C13-L1-A2/disgust.jpg",
+        "text":"I evoke a sense of distrust in you. I make you feel bitter and unwanted. I am a response to something that may be wrong or where rules may be violated. I help you notice what’s unsafe. What emotion am I?",
+        "answer":"Disgust"
+    },
+    {
+        "img":"/C13-L1-A2/anger.jpg",
+        "text":"I make you feel fierce and strong-headed. I am a response to an obstacle in your path. I help you feel energized to overcome what’s in the way to succeed. What emotion am I?",
+        "answer":"Anger"
+    },
+     {
+        "img":"/C13-L1-A2/joy_2.png",
+        "text":"I get you excited with a sense of positive energy about possibilities. I am a response to things going well. I spark creativity and connection in you. What emotion am I?",
+        "answer":"Joy"
+    }
+]
