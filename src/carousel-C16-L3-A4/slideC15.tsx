@@ -33,6 +33,9 @@ export default function SlideC15({
   const clock = new Audio("sound/clock.mp3");
   const correctAns = new Audio("sound/correct.mp3");
 
+  const clockRef = useRef<HTMLAudioElement | null>(null);
+ 
+
   const handleNext = () => {
     if (lastSlide == SlideData.length - 1) {
       setIsFirstScreen("result");
@@ -48,13 +51,31 @@ export default function SlideC15({
   };
 
   useEffect(() => {
-    clock.play();
+    // Purani sound ko pause karo aur time reset karo
+    if (clockRef.current) {
+      clockRef.current.pause();
+      clockRef.current.currentTime = 0;
+    }
+    // Pehli baar sound instance initialize karo agar nahi hai
+  if (!clockRef.current) {
+    clockRef.current = new Audio("sound/clock.mp3");
+  }
+
+  // Clock sound play karo
+  if (time > 0) {
+    clockRef.current.play();
+  }
     const interval = setInterval(() => {
       setTime((prevTime) => {
         if (prevTime === 1) {
           clearInterval(interval);
           setOver(true);
-          clock.pause();
+  
+          // 🛑 Time over hone pe clock sound band karo
+          if (clockRef.current) {
+            clockRef.current.pause();
+            clockRef.current.currentTime = 0;
+          }
 
           return 0;
         }
@@ -67,6 +88,10 @@ export default function SlideC15({
   }, [lastSlide]);
 
   const handleChange = (swipe: SwiperClass) => {
+  clock.pause()
+   if(time == 30){
+clock.play()
+   }
     setLastSlide(swipe.activeIndex);
     setTime(30);
     setOver(false);

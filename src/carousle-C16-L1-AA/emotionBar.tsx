@@ -7,9 +7,9 @@ import { useEffect, useState } from "react";
 const Emotins = [
   { name: "Surprise.",img:"/emojis/Surprise.png" },
   { name: "Anticipation",img:"/emojis/Anticipation.png" },
-  { name: "Happy",img:"/emojis/Happy.png" },
+  { name: "Happy",img:"/emojis/happy.png" },
   { name: "Disgust",img:"/emojis/Disgust.png" },
-  { name: "Angry",img:"/emojis/Angry.png" },
+  { name: "Angry",img:"/emojis/angry.png" },
   
 ];
 
