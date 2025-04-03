@@ -1,5 +1,9 @@
 [
     {
+        "img":"/C16/garbegeCan.jpg",
+        "text":"Your peer throws garbage outside the garbage can.",
+        "answer":"Angry"
+    } , {
         "img":"/C16/speekLoud.jpg",
         "text":"Your peer shouts in the classroom while the teacher is speaking.",
         "answer":"Disgust"

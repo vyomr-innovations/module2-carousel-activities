@@ -55,7 +55,7 @@ const EmotionBar = ({ item }: myProps) => {
         >
           <h3>{item.name}</h3>
          <div className=" ">
-         <Image src={item.img} width={60} height={60}  alt="emoji"/>
+         <Image src={item.img} width={60} height={60}  alt=""/>
          </div>
         </div>
       ))}
