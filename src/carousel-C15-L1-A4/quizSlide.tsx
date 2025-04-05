@@ -73,7 +73,7 @@ export default function QuizSlide() {
                         className={`text-md text-white min-w-[280px] bg-blue-700 px-5 py-1 rounded-lg border border-black my-2 
                           ${
                             selectedAnswer[index] === Answerindex
-                              ? "bg-green-500"
+                              ? "bg-green-700"
                               : ""
                           }`}
                         onClick={() => handleAnswer(i, index, Answerindex)}
