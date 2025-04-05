@@ -53,11 +53,9 @@ export default function SlideStart() {
         >
           {SlideData.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="grid grid-cols-12 w-full h-full  border p-2 rounded-lg">
+              <div className="grid grid-cols-12 gap-4 w-full h-full  border p-2 rounded-lg">
                 <div className="col-span-6  w-full h-[400px] relative">
-                  <h3 className="text-white text-xl text-center  absolute w-full">
-                    {item.text}
-                  </h3>
+                 
                   <Image
                     src={item.image}
                     fill
@@ -66,7 +64,7 @@ export default function SlideStart() {
                   />
                 </div>
                 <div className="col-span-6 flex justify-center items-center flex-col gap-5 ">
-                  <h3 className="text-black text-lg">POLITE OR NOT ?</h3>
+                  <h3 className="text-black w-full text-2xl text-center "> {item.text}</h3>
                   <div className=" flex justify-around items-center  w-full">
                     <h4 className="text-black text-lg">Your Response :</h4>
                     <div className=" py-4 flex items-center justify-around  gap-6 text-black">
